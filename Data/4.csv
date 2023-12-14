@@ -1,0 +1,491 @@
+,Question,Answer
+0,"1. The recovery scheme must also provide
+a) High availability
+b) Low availability
+c) High reliability
+d) High durability
+View Answer","Answer: a
+Explanation: It must minimize the time for which the database is not usable after a failure."
+1,"2. Which one of the following is a failure to a system
+a) Boot crash
+b) Read failure
+c) Transaction failure
+d) All of the mentioned
+View Answer","Answer: c
+Explanation: Types of system failure are transaction failure, system crash and disk failure."
+2,"3. Which of the following belongs to transaction failure
+a) Read error
+b) Boot error
+c) Logical error
+d) All of the mentioned
+View Answer","Answer: c
+Explanation: Types of system transaction failure are logical and system error."
+3,"4. The system has entered an undesirable state (for example, deadlock), as a result of which a transaction cannot continue with its normal execution. This is
+a) Read error
+b) Boot error
+c) Logical error
+d) System error
+View Answer","Answer: c
+Explanation: The transaction, can be re-executed at a later time."
+4,"5. The transaction can no longer continue with its normal execution because of some internal condition, such as bad input, data not found, overflow, or resource limit exceeded. This is
+a) Read error
+b) Boot error
+c) Logical error
+d) System error
+View Answer","Answer: c
+Explanation: The transaction, can be re-executed at a later time."
+5,"6. The assumption that hardware errors and bugs in the software bring the system to a halt, but do not corrupt the nonvolatile storage contents, is known as the
+a) Stop assumption
+b) Fail assumption
+c) Halt assumption
+d) Fail-stop assumption
+View Answer","Answer: d
+Explanation: Well-designed systems have numerous internal checks, at the hardware and the software level, that bring the system to a halt when there is an error. Hence, the fail-stop assumption is a reasonable one."
+6,"7. Which kind of failure loses its data in head crash or failure during a transfer operation.
+a) Transaction failure
+b) System crash
+c) Disk failure
+d) All of the mentioned
+View Answer","Answer: c
+Explanation: Copies of the data on other disks, or archival backups on tertiary media, such as DVD or tapes, are used to recover from the failure."
+7,"8. The failure occurred sufficiently early during the transfer that the destination block remains intact.
+a) Partial Failure
+b) Total failure
+c) Successful completion
+d) Data transfer failure
+View Answer","Answer: a
+Explanation: Copies of the data on other disks, or archival backups on tertiary media, such as DVD or tapes, are used to recover from the failure."
+8,"9. The database is partitioned into fixed-length storage units called
+a) Parts
+b) Blocks
+c) Reads
+d) Build
+View Answer","Answer: b
+Explanation: Blocks are the units of data transfer to and from disk, and may contain several data items."
+9,"10. Which of the following causes system to crash
+a) Bug in software
+b) Loss of volatile data
+c) Hardware malfunction
+d) All of the mentioned
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: d
+Explanation: The content of non-volatile storage remains intact, and is not corrupted."
+10,"1. The log is a sequence of _________ recording all the update activities in the database.
+a) Log records
+b) Records
+c) Entries
+d) Redo
+View Answer","Answer: a
+Explanation: The most widely used structure for recording database modifications is the log."
+11,"2. In the ___________ scheme, a transaction that wants to update the database first creates a complete copy of the database.
+a) Shadow copy
+b) Shadow Paging
+c) Update log records
+d) All of the mentioned
+View Answer","Answer: a
+Explanation: If at any point the transaction has to be aborted, the system merely deletes the new copy. The old copy of the database has not been affected."
+12,"3. The ____________ scheme uses a page table containing pointers to all pages; the page table itself and all updated pages are copied to a new location.
+a) Shadow copy
+b) Shadow Paging
+c) Update log records
+d) All of the mentioned
+View Answer","Answer: b
+Explanation: Any page which is not updated by a transaction is not copied, but instead the new page table just stores a pointer to the original page."
+13,"4. The current copy of the database is identified by a pointer, called ____________ which is stored on disk.
+a) Db-pointer
+b) Update log
+c) Update log records
+d) All of the mentioned
+View Answer","Answer: a
+Explanation: Any page which is not updated by a transaction is not copied, but instead the new page table just stores a pointer to the original page."
+14,"5. If a transaction does not modify the database until it has committed, it is said to use the ___________ technique.
+a) Deferred-modification
+b) Late-modification
+c) Immediate-modification
+d) Undo
+View Answer","Answer: a
+Explanation: Deferred modification has the overhead that transactions need to make local copies of all updated data items; further, if a transaction reads a data item that it has updated, it must read the value from its local copy."
+15,"6. If database modifications occur while the transaction is still active, the transaction is said to use the ___________technique.
+a) Deferred-modification
+b) Late-modification
+c) Immediate-modification
+d) Undo
+View Answer","Answer: c
+Explanation: We say a transaction modifies the database if it performs an update on a disk buffer, or on the disk itself; updates to the private part of main memory do not count as database modifications."
+16,"7. ____________ using a log record sets the data item specified in the log record to the old value.
+a) Deferred-modification
+b) Late-modification
+c) Immediate-modification
+d) Undo
+View Answer","Answer: d
+Explanation: Undo brings the previous contents."
+17,"8. In the __________ phase, the system replays updates of all transactions by scanning the log forward from the last checkpoint.
+a) Repeating
+b) Redo
+c) Replay
+d) Undo
+View Answer","Answer: b
+Explanation: Undo brings the previous contents."
+18,"9. The actions which are played in the order while recording it is called ______________ history.
+a) Repeating
+b) Redo
+c) Replay
+d) Undo
+View Answer","Answer: a
+Explanation: Undo brings the previous contents."
+19,"10. A special redo-only log record < Ti, Xj, V1> is written to the log, where V1 is the value being restored to data item Xj during the rollback. These log records are sometimes called
+a) Log records
+b) Records
+c) Compensation log records
+d) Compensation redo records
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: c
+Explanation: Such records do not need undo information since we never need to undo such an undo operation."
+20,"1. In order to reduce the overhead in retrieving the records from the storage space we use
+a) Logs
+b) Log buffer
+c) Medieval space
+d) Lower records
+View Answer","Answer: b
+Explanation: The output to stable storage is in units of blocks."
+21,"2. The order of log records in the stable storage ____________ as the order in which they were written to the log buffer.
+a) Must be exactly the same
+b) Can be different
+c) Is opposite
+d) Can be partially same
+View Answer","Answer: a
+Explanation: As a result of log buffering, a log record may reside in only main memory (volatile storage) for a considerable time before it is output to stable storage."
+22,"3. Before a block of data in main memory can be output to the database, all log records pertaining to data in that block must have been output to stable storage. This is
+a) Read-write logging
+b) Read-ahead logging
+c) Write-ahead logging
+d) None of the mentioned
+View Answer","Answer: c
+Explanation: The WAL rule requires only that the undo information in the log has been output to stable storage, and it permits the redo information to be written later."
+23,"4. Writing the buffered log to __________ is sometimes referred to as a log force.
+a) Memory
+b) Backup
+c) Redo memory
+d) Disk
+View Answer","Answer: d
+Explanation: If there are insufficient log records to fill the block, all log records in main memory are combined into a partially full block and are output to stable storage."
+24,"5. The _______________ policy, allows a transaction to commit even if it has modified some blocks that have not yet been written back to disk.
+a) Force
+b) No-force
+c) Steal
+d) No-steal
+View Answer","Answer: b
+Explanation: No-force policy allows faster commit of transactions."
+25,"6. ______________ policy allows multiple updates to accumulate on a block before it is output to stable storage, which can reduce the number of output operations greatly for frequently updated blocks.
+a) Force
+b) No-force
+c) Steal
+d) No-steal
+View Answer","Answer: b
+Explanation: No-force policy allows faster commit of transactions."
+26,"7. The ___________ policy, allows the system to write modified blocks to disk even if the transactions that made those modifications have not all committed.
+a) Force
+b) No-force
+c) Steal
+d) No-steal
+View Answer","Answer: c
+Explanation: The no-steal policy does not work with transactions that perform a large number of updates."
+27,"8. Locks on buffer blocks are unrelated to locks used for concurrency-control of transactions, and releasing them in a non-two-phase manner does not have any implications on transaction serializability. This is
+a) Latches
+b) Swap Space
+c) Dirty Block
+d) None of the mentioned
+View Answer","Answer: a
+Explanation: These locks, and other similar locks that are held for a short duration."
+28,"9. The __________________ contains a list of blocks that have been updated in the database buffer.
+a) Latches
+b) Swap Space
+c) Dirty Block
+d) None of the mentioned
+View Answer","Answer: c
+Explanation: Dirty blocks are those that have been updated in memory, and the disk version is not up-to-date."
+29,"10. The operating system reserves space on disk for storing virtual-memory pages that are not currently in main memory; this space is called
+a) Latches
+b) Swap Space
+c) Dirty Block
+d) None of the mentioned
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: b
+Explanation: Almost all current-generation operating systems retain complete control of virtual memory."
+30,"1. The silicon chips used for data processing are called
+a) RAM chips
+b) ROM chips
+c) Micro processors
+d) PROM chips
+View Answer","Answer: d
+Explanation: PROM is Programmable Read Only Memory."
+31,"2. Which of the following is used for manufacturing chips?
+a) Control bus
+b) Control unit
+c) Parity unit
+d) Semiconductor
+View Answer","Answer: d
+Explanation: A semiconductor is a material which has electrical conductivity between that of a conductor such as copper and that of an insulator such as glass."
+32,"3. What was the name of the first commercially available microprocessor chip?
+a) Intel 308
+b) Intel 33
+c) Intel 4004
+d) Motorola 639
+View Answer","Answer: c
+Explanation: The Intel 4004 is a 4-bit central processing unit (CPU) released by Intel Corporation in 1971 "
+33,"4. The magnetic storage chip used to provide non-volatile direct access storage of data and that have no moving parts are known as
+a) Magnetic core memory
+b) Magnetic tape memory
+c) Magnetic disk memory
+d) Magnetic bubble memory
+View Answer","Answer: d
+Explanation: Bubble domain visualization by using CMOS-MagView."
+34,"5. The ALU of a computer normally contains a number of high speed storage element called
+a) Semiconductor memory
+b) Registers
+c) Hard disks
+d) Magnetic disk
+View Answer","Answer: b
+Explanation: External control unit tells the ALU what operation to perform on that data, and then the ALU stores its result into an output register."
+35,"6. Which of the following is used only for data entry and storage, and never for processing?
+a) Mouse
+b) Dumb terminal
+c) Micro computer
+d) Dedicated data entry system
+View Answer","Answer: b
+Explanation: Dumb terminals are those that can interpret a limited number of control codes."
+36,"7. Non-volatile storage needs to have a _________ where the loses in future can be recovered.
+a) Dump
+b) Recover place
+c) Disk
+d) Redo plan
+View Answer","Answer: a
+Explanation: The basic scheme is to dump the entire contents of the database to stable storage periodically—say, once per day."
+37,"8. A dump of the database contents is also referred to as an _____________ dump.
+a) Archival
+b) Fuzzy
+c) SQL
+d) All of the mentioned
+View Answer","Answer: a
+Explanation: We can archive the dumps and use them later to examine old states of the database."
+38,"9. ________ dump, writes out SQL DDL statements and SQL insert statements to a file, which can then be reexecuted to re-create the database.
+a) Archival
+b) Fuzzy
+c) SQL
+d) All of the mentioned
+View Answer","Answer: c
+Explanation: Such dumps are useful when migrating data to a different instance of the database, or to a different version of the database software, since the physical locations and layout may be different in the other database instance or database software version."
+39,"10. _________ dump schemes have been developed that allow transactions to be active while the dump is in progress.
+a) Archival
+b) Fuzzy
+c) SQL
+d) All of the mentioned
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: b
+Explanation: The simple dump procedure described here is costly and so fuzzy dump is used."
+40,"1. ARIES uses a ___________ to identify log records, and stores it in database pages.
+a) Log sequence number
+b) Log number
+c) Lock number
+d) Sequence
+View Answer","Answer: b
+Explanation: LSN is used to identify which operations have been applied to a database page."
+41,"2. ARIES supports ___________ operations, which are physical in that the affected page is physically identified, but can be logical within the page.
+a) Physiological redo
+b) Physiological undo
+c) Logical redo
+d) Logical undo
+View Answer","Answer: a
+Explanation: The deletion of a record from a page may result in many other records in the page being shifted, if a slotted page structure is used."
+42,"3. ______________ is used to minimize unnecessary redos during recovery.
+a) Dirty page table
+b) Page table
+c) Dirty redo
+d) All of the mentioned
+View Answer","Answer: a
+Explanation: Dirty pages are those that have been updated in memory, and the disk version is not up-to-date."
+43,"4. __________ scheme that records only information about dirty pages and associated information and does not even require of writing dirty pages to disk.
+a) Fuzzy logic
+b) Checkpoints
+c) Fuzzy-checkpoint
+d) Logical checkpoint
+View Answer","Answer: c
+Explanation: It flushes dirty pages in the background, continuously, instead of writing them during checkpoints."
+44,"5. Whenever an update operation occurs on a page, the operation stores the LSN of its log record in the _______ field of the page.
+a) LSN
+b) ReadLSN
+c) PageLSN
+d) RedoLSN
+View Answer","Answer: c
+Explanation: Each page maintains an identifier called the PageLSN."
+45,"6. There are special redo-only log records generated during transaction rollback, called _________ in ARIES.
+a) Compensation log records
+b) Read log records
+c) Page log records
+d) Redo log records
+View Answer","Answer: a
+Explanation: These serve the same purpose as the redo-only log records in our earlier recovery scheme."
+46,"7. The __________________ contains a list of pages that have been updated in the database buffer.
+a) Dirty page table
+b) Page table
+c) Dirty redo
+d) All of the mentioned
+View Answer","Answer: a
+Explanation: Dirty pages are those that have been updated in memory, and the disk version is not up-to-date."
+47,"8. ___________ determines which transactions to undo, which pages were dirty at the time of the crash, and the LSN from which the redo pass should start.
+a) Analysis pass
+b) Redo pass
+c) Undo pass
+d) None of the mentioned
+View Answer","Answer: a
+Explanation: The analysis pass finds the last complete checkpoint log record, and reads in the DirtyPageTable from this record."
+48,"9. __________ starts from a position determined during analysis, and performs a redo, repeating history, to bring the database to a state it was in before the crash.
+a) Analysis pass
+b) Redo pass
+c) Undo pass
+d) None of the mentioned
+View Answer","Answer: b
+Explanation: The redo pass repeats history by replaying every action that is not already reflected in the page on disk."
+49,"10. ______________ rolls back all transactions that were incomplete at the time of crash.
+a) Analysis pass
+b) Redo pass
+c) Undo pass
+d) None of the mentioned
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: c
+Explanation: It performs a single backward scan of the log, undoing all transactions in undo-list."
+50,"1. Which lock should be obtained to prevent a concurrent transaction from executing a conflicting read, insert or delete operation on the same key value.
+a) Higher-level lock
+b) Lower-level lock
+c) Read only lock
+d) Read write
+View Answer","Answer: a
+Explanation: Operations acquire lower-level locks while they execute, but release them when they complete; the corresponding transaction must however retain a higher-level lock in a two-phase manner to prevent concurrent transactions from executing conflicting actions."
+51,"2. Once the lower-level lock is released, the operation cannot be undone by using the old values of updated data items, and must instead be undone by executing a compensating operation; such an operation is called
+a) Logical operation
+b) Redo operation
+c) Logical undo operation
+d) Undo operation
+View Answer","Answer: a
+Explanation: It is important that the lower-level locks acquired during an operation are sufficient to perform a subsequent logical undo of the operation."
+52,"3. Which of the following is used for undo operations alone?
+a) Logical logging
+b) Physical logging
+c) Physical log records
+d) Physical logging and Physical log records
+View Answer","Answer: a
+Explanation: If the operation inserted an entry in a B+-tree, the undo information U would indicate that a deletion operation is to be performed, and would identify the B+-tree and what entry to delete from the tree. Such logging of information about operations is called logical logging."
+53,"4. Redo operations are performed exclusively using
+a) Logical logging
+b) Physical logging
+c) Physical log records
+d) Both Physical logging and Physical log records
+View Answer","Answer: d
+Explanation: Logging of old-value and new-value information is called physical logging."
+54,"5. To perform logical redo or undo, the database state on disk must be operation ___________ that is, it should not have partial effects of any operation.
+a) Persistent
+b) Resistant
+c) Consistent
+d) None of the mentioned
+View Answer","Answer: c
+Explanation: Data structures such as B+-trees would not be in a consistent state, and neither logical redo nor logical undo operations can be performed on an inconsistent data structure."
+55,"6. An operation is said to be __________ if executing it several times in a row gives the same result as executing it once.
+a) Idempotent
+b) Changed
+c) Repetitive
+d) All of the above
+View Answer","Answer: a
+Explanation: Operations such as inserting an entry into a B+-tree may not be idempotent, and the recovery algorithm must therefore make sure that an operation that has already been performed is not performed again."
+56,"7. Immediate database modification technique uses
+a) Both undo and redo
+b) Undo but no redo
+c) Redo but no undo
+d) Neither undo nor redo
+View Answer","Answer: a
+Explanation: Undo erases all the changes and redo makes the deleted changes."
+57,"8. Shadow paging has
+a) no redo
+b) no undo
+c) redo but no undo
+d) neither redo nor undo
+View Answer","Answer: a
+Explanation: Undo erases all the changes and redo makes the deleted changes."
+58,"9. For correct behaviour during recovery, undo and redo operation must be
+a) Commutative
+b) Associative
+c) Idempotent
+d) Distributive
+View Answer","Answer: c
+Explanation: Undo erases all the changes and redo makes the deleted changes."
+59,"10. If ___________ are not obtained in undo operation it will cause problem in undo-phase.
+a) Higher-level lock
+b) Lower-level lock
+c) Read only lock
+d) Read write
+View Answer","Answer: b
+Explanation: Operations acquire lower-level locks while they execute, but release them when they complete; the corresponding transaction must however retain a higher-level lock in a two-phase manner to prevent concurrent transactions from executing conflicting actions."
+60,"1. The remote backup site is sometimes also called the
+a) Primary Site
+b) Secondary Site
+c) Tertiary Site
+d) None of the mentioned
+View Answer","Answer: b
+Explanation: We can achieve high availability by performing transaction processing at one site, called the primary site, and having a remote backup site where all the data from the primary site are replicated."
+61,"2. Remote backup system must be _________ with the primary site.
+a) Synchronised
+b) Separated
+c) Connected
+d) Detached but related
+View Answer","Answer: a
+Explanation: We can achieve high availability by performing transaction processing at one site, called the primary site, and having a remote backup site where all the data from the primary site are replicated."
+62,"3. The backup is taken by
+a) Erasing all previous records
+b) Entering the new records
+c) Sending all log records from primary site to the remote backup site
+d) Sending selected records from primary site to the remote backup site
+View Answer","Answer: c
+Explanation: We can achieve high availability by performing transaction processing at one site, called the primary site, and having a remote backup site where all the data from the primary site are replicated."
+63,"4. When the __________ the backup site takes over processing and becomes the primary.
+a) Secondary fails
+b) Backup recovers
+c) Primary fails
+d) None of the mentioned
+View Answer","Answer: c
+Explanation: When the original primary site recovers, it can either play the role of remote backup, or take over the role of primary site again."
+64,"5. The simplest way of transferring control is for the old primary to receive __________ from the old backup site.
+a) Undo logs
+b) Redo Logs
+c) Primary Logs
+d) All of the mentioned
+View Answer","Answer: c
+Explanation: If control must be transferred back, the old backup site can pretend to have failed, resulting in the old primary taking over."
+65,"6. The time to process the remote backup can be reduced by
+a) Flags
+b) Breakpoints
+c) Redo points
+d) Checkpoints
+View Answer","Answer: d
+Explanation: If the log at the remote backup grows large, recovery will take a long time. The remote backup site can periodically process the redo log records that it has received and can perform a checkpoint, so that earlier parts of the log can be deleted."
+66,"7. A _______________ configuration can make takeover by the backup site almost instantaneous.
+a) Hot-spare
+b) Remote
+c) Direct
+d) Spare
+View Answer","Answer: d
+Explanation: In this configuration, the remote backup site continually processes redo log records as they arrive, applying the updates locally."
+67,"8. A transaction commits as soon as its commit log record is written to stable storage at the primary site. This is
+a) One Safe
+b) Two Safe
+c) Two-very Safe
+d) Very Safe
+View Answer","Answer: a
+Explanation: The problem with this scheme is that the updates of a committed transaction may not have made it to the backup site, when the backup site takes over processing."
+68,"9. A transaction commits as soon as its commit log record is written to stable storage at the primary and the backup site. This is
+a) One Safe
+b) Two Safe
+c) Two-very Safe
+d) Very Safe
+View Answer","Answer: c
+Explanation: The problem with this scheme is that transaction processing cannot proceed if either the primary or the backup site is down."
+69,"10. If only the primary is active, the transaction is allowed to commit as soon as its commit log record is written to stable storage at the primary site. This is
+a) One Safe
+b) Two Safe
+c) Two-very Safe
+d) Very Safe
+View AnswerSanfoundry Global Education & Learning Series – Database Management System.","Answer: b
+Explanation: This scheme provides better availability than does two-very-safe, while avoiding the problem of lost transactions faced by the one-safe scheme."
