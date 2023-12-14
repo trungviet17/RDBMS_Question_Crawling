@@ -1,0 +1,602 @@
+,Question,Answer
+0,"1.	Which of the following is a transaction isolation level as specified by SQL standard?
+a)	Serializable
+b)	Repeatable read
+c)	Read committed
+d)	All of the mentioned
+View Answer","Answer: a
+Explanation: Serializable, repeatable read, read committed and read uncommitted are the four levels of transactions."
+1,"2.	State true or false: Serializable level may allow both serializable and non-serializable executions
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Serializable level generally allows only serializable executions but in some special cases, it may also allow non-serializable execution."
+2,"3.	________ allows only committed data to be read and further requires that no other transaction is allowed to update it between two reads of a data item by a transaction.
+a)	Read uncommitted
+b)	Serializable
+c)	Repeatable read
+d)	Read committed
+View Answer","Answer: c
+Explanation: Repeatable read allows only committed data to be read and further requires that no other transaction is allowed to update it between two reads of a data item by a transaction. However, the transaction may not be serializable with respect to other transactions."
+3,"4.	________ allows only committed data to be read, but does not require repeatable reads
+a)	Read uncommitted
+b)	Serializable
+c)	Repeatable read
+d)	Read committed
+View Answer","Answer: d
+Explanation: Read committed allows only committed data to be read, but does not require repeatable reads. For instance, between two reads of a data item by the transaction, another transaction may have updated the data item and committed."
+4,"5.	___________ allows uncommitted data to be read
+a)	Read uncommitted
+b)	Serializable
+c)	Repeatable read
+d)	Read committed
+View Answer","Answer: a
+Explanation: Real uncommitted allows uncommitted data to be read. It is the lowest isolation level allowed by SQL."
+5,"6.	State true or false: All the isolation levels disallow dirty writes
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: All the isolation levels above additionally disallow dirty writes, that is, they Disallow writes to a data item that has already been written by another transaction that has not yet committed or aborted."
+6,"7.	When is a timestamp allotted
+a)	When execution begins
+b)	When execution is taking place
+c)	When execution is completed
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Timestamp is allotted when execution of a transaction begins."
+7,"8.	In ___________ isolation each transaction is given its own version of the database
+a)	Timestamp
+b)	Snapshot
+c)	Lock based
+d)	All of the mentioned
+View Answer","Answer: b
+Explanation: In snapshot isolation, each transaction is given its own version or snapshot of the database on which it can operate."
+8,"9.	What is the disadvantage of locking?
+a)	Does not control concurrency
+b)	Is not atomic
+c)	Is not durable
+d)	Has a poor degree of concurrency
+View Answer",Answer: Locking has a poor degree of concurrency. It in fact has no concurrency at all.
+9,"1.	If a transaction has obtained a __________ lock, it can read but cannot write on the item
+a)	Shared mode
+b)	Exclusive mode
+c)	Read only mode
+d)	Write only mode
+View Answer","Answer: a
+Explanation: If a transaction Ti has obtained a shared-mode lock (denoted by S) on item Q, then Ti can read, but cannot write, Q. "
+10,"2.	If a transaction has obtained a ________ lock, it can both read and write on the item
+a)	Shared mode
+b)	Exclusive mode
+c)	Read only mode
+d)	Write only mode
+View Answer","Answer: b
+Explanation: If a transaction has obtained an exclusive mode lock, then it can both read and write on the item on which it in operating. "
+11,"3.	A transaction can proceed only after the concurrency control manager ________ the lock to the transaction
+a)	Grants
+b)	Requests
+c)	Allocates
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A transaction can proceed only after the concurrency control manager grants the lock to the transaction."
+12,"4.	If a transaction can be granted a lock on an item immediately in spite of the presence of another mode, then the two modes are said to be ________
+a)	Concurrent
+b)	Equivalent
+c)	Compatible
+d)	Executable
+View Answer","Answer: c
+Explanation:  If a transaction can be granted a lock on an item immediately in spite of the presence of another mode, then the two modes are said to be compatible. "
+13,"5.	A transaction is made to wait until all ________ locks held on the item are released
+a)	Compatible
+b)	Incompatible
+c)	Concurrent
+d)	Equivalent
+View Answer","Answer: a
+Explanation: A transaction is made to wait until all compatible locks held on the item are released. This ensures that no other transaction is concurrently accessing the same item."
+14,"6.	State true or false: It is not necessarily desirable for a transaction to unlock a data item immediately after its final access
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: It is not necessarily desirable for a transaction to unlock a data item immediately after its final access because serializability may be violated due to this. "
+15,"7.	The situation where no transaction can proceed with normal execution is known as ________
+a)	Road block
+b)	Deadlock
+c)	Execution halt
+d)	Abortion
+View Answer","Answer: b
+Explanation: The situation where no transaction can proceed with normal execution is known as a deadlock. "
+16,"8.	The protocol that indicates when a transaction may lock and unlock each of the data items is called as __________
+a)	Locking protocol
+b)	Unlocking protocol
+c)	Granting protocol
+d)	Conflict protocol
+View Answer","Answer: a
+Explanation: The protocol that indicates when a transaction may lock and unlock each of the data items is called as locking protocol. Locking protocols restrict the number of schedules. "
+17,"9.	If a transaction Ti may never make progress, then the transaction is said to be ____________
+a)	Deadlocked
+b)	Starved
+c)	Committed
+d)	Rolled back
+View Answer","Answer: b
+Explanation: If a transaction Ti may never make progress, then the transaction is said to be starved. "
+18,"10.	The two phase locking protocol consists which of the following phases?
+a)	Growing phase
+b)	Shrinking phase
+c)	More than one of the mentioned
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The two phased locking protocol consists of the growing phase and the shrinking phase."
+19,"11.	If a transaction may obtain locks but may not release any locks then it is in _______ phase
+a)	Growing phase
+b)	Shrinking phase
+c)	Deadlock phase
+d)	Starved phase
+View Answer","Answer: a
+Explanation:  If a transaction may obtain locks but may not release any locks then it is in growing phase. Growing phase is a phase in two phased locking protocol."
+20,"12.	If a transaction may release locks but may not obtain any locks, it is said to be in ______ phase
+a)	Growing phase
+b)	Shrinking phase
+c)	Deadlock phase
+d)	Starved phase
+View Answer","Answer: b
+Explanation: If a transaction may release locks but may not obtain any locks, it is said to be in shrinking phase. Shrinking phase is a phase in two phased locking protocol."
+21,"1.	A system is in a _______ state if there exists a set of transactions in which every transaction is waiting for another transaction in the set.
+a)	Deadlock
+b)	Starved
+c)	Isolated
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A system is in a deadlock state if there exists a set of transactions in which every transaction is waiting for another transaction in the set."
+22,"2.	Which of the following is not a method in deadlock handling
+a)	Deadlock prevention
+b)	Deadlock detection
+c)	Deadlock recovery
+d)	Deadlock distribution
+View Answer","Answer: d
+Explanation: Deadlock distribution is not a method in deadlock handling whereas, deadlock prevention is followed by deadlock detection and deadlock recovery."
+23,"3.	Deadlocks can be prevented using
+a)	Preemption and transaction rollbacks
+b)	Wait and die scheme
+c)	Wound-wait scheme
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Preemption and transaction rollbacks, wait and die scheme, wound wait scheme are all different methods of deadlock prevention."
+24,"4.	State true or false: Wait die scheme is a non-preemptive technique
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The wait-die scheme is a non-preemptive technique. When transaction Ti requests a data item currently held by Tj , Ti is allowed to wait only if it has a timestamp smaller than that of Tj (that is, Ti is older than Tj ). Otherwise, Ti is rolled back (dies)."
+25,"5.	Lock timeouts have which of the following advantages?
+a)	Unnecessary rollbacks do not occur
+b)	Transactions do not starve
+c)	It is easy to implement
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: In lock timeout method, unnecessary rollbacks do not occur, transactions do not starve and it is also easy to implement and is hence widely used if transactions are short and long waits are likely to be due to deadlocks."
+26,"6.	The _________ graph describes deadlocks precisely
+a)	Wound wait graph
+b)	Wait die graph
+c)	Wait for graph
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The wait for graph describes deadlocks precisely. Existence of a cycle in this graph implies that a deadlock will occur."
+27,"7.	How do we generally recover from a deadlock?
+a)	By aborting all the transactions
+b)	By rolling back all the transactions
+c)	By rolling back only a selected number of transactions
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: We generally recover from deadlocks by rolling back only a selected number of transactions"
+28,"8.	State true or false: Partial rollback is not possible.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Partial rollback is possible but it requires the system too maintain an additional amount of information on the states of the transactions."
+29,"9.	Which of the following steps must be taken while choosing a victim?
+a)	Avoiding starvation
+b)	Number of transactions involved in rollback
+c)	Data items used by the transaction
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: While choosing a victim we much choose the one with a minimum cost. That is the one which avoids starvation, the one with the least number of transaction involved in the rollback and the one with the least amount of data items used."
+30,"1.	Which of the following cannot be used to implement a timestamp
+a)	System clock
+b)	Logical counter
+c)	External time counter
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: An external time counter cannot be used to implement a timestamp. System clock and a logical counter can be used."
+31,"2.	A logical counter is _________ after a new timestamp has been assigned
+a)	Incremented
+b)	Decremented
+c)	Doubled
+d)	Remains the same
+View Answer","Answer: a
+Explanation: A logical counter is incremented after a new timestamp has been assigned everytime."
+32,"3.	W-timestamp(Q) denotes?
+a)	The largest timestamp of any transaction that can execute write(Q) successfully
+b)	The largest timestamp of any transaction that can execute read(Q) successfully
+c)	The smallest timestamp of any transaction that can execute write(Q) successfully
+d)	The smallest timestamp of any transaction that can execute read(Q) successfully
+View Answer","Answer: a
+Explanation: W-timestamp(Q) denotes The largest timestamp of any transaction that can execute write(Q) successfully."
+33,"4.	R-timestamp(Q) denotes?
+a)	The largest timestamp of any transaction that can execute write(Q) successfully
+b)	The largest timestamp of any transaction that can execute read(Q) successfully
+c)	The smallest timestamp of any transaction that can execute write(Q) successfully
+d)	The smallest timestamp of any transaction that can execute read(Q) successfully
+View Answer","Answer: b
+Explanation: R-timestamp(Q) denoted the largest timestamp of any transaction that can execute read(Q) successfully."
+34,"5.	A ________ ensures that any conflicting read and write operations are executed in timestamp order
+a)	Organizational protocol
+b)	Timestamp ordering protocol
+c)	Timestamp execution protocol
+d)	802-11 protocol
+View Answer","Answer: b
+Explanation: A timestamp ordering protocol ensures that any conflicting read and write operations are executed in timestamp order."
+35,"6.	The default timestamp ordering protocol generates schedules that are
+a)	Recoverable
+b)	Non-recoverable
+c)	Starving
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The timestamp ordering protocol generates schedules that are non-recoverable. But it can be extended to make the schedules recoverable."
+36,"7.	State true or false: The Thomas write rule has a greater potential concurrency than the timestamp ordering protocol
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The Thomas write rule has a greater potential concurrency than the timestamp ordering protocol. This is because it is a modified version of the timestamp ordering protocol in which obsolete write operations can be ignored under certain circumstances."
+37,"8.	Which of the following timestamp based protocols generates serializable schedules?
+a)	Thomas write rule
+b)	Timestamp ordering protocol
+c)	Validation protocol
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Thomas write rule protocol generates serializable schedules that no other protocol can generate."
+38,"9.	In timestamp ordering protocol, suppose that the transaction Ti issues read(Q) and TS(Ti)<W-timestamp(Q), then
+a)	Read operation is executed
+b)	Read operation is rejected
+c)	Write operation is executed
+d)	Write operation is rejected
+View Answer","Answer: b
+Explanation: Suppose that transaction Ti issues read(Q). If TS(Ti ) < W-timestamp(Q), then Ti needs to read a value of Q that was already overwritten. Hence, the read operation is rejected, and Ti is rolled back."
+39,"10.	In timestamp ordering protocol, suppose that the transaction Ti issues write(Q) and TS(Ti)<W-timestamp(Q), then
+a)	Read operation is executed
+b)	Read operation is rejected
+c)	Write operation is executed
+d)	Write operation is rejected
+View Answer","Answer: d
+Explanation: In timestamp ordering protocol, suppose that the transaction Ti issues write(Q) and TS(Ti)<W-timestamp(Q), then the value of Q that Ti is producing was needed previously, and the system assumed that the value would never be produced. Hence the system rejects the write(Q) operation and the transaction Ti rolls back."
+40,"1.	The _________ requires each transaction executes in two or three different phases in its lifetime
+a)	Validation protocol
+b)	Timestamp protocol
+c)	Deadlock protocol
+d)	View protocol
+View Answer","Answer: a
+Explanation: The validation protocol requires each transaction to execute in two or three different phases in its lifetime depending on whether it is a read only or an update transaction. "
+41,"2.	During __________ phase, the system reads data and stores them in variables local to the transaction.
+a)	Read phase
+b)	Validation phase
+c)	Write phase
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: During the read phase, the system reads data and stores them in variables local to the transaction. It performs all write operations on temporary local variables without updates on the actual database. "
+42,"3.	During the _________ phase the validation test is applied to the transaction
+a)	Read phase
+b)	Validation phase
+c)	Write phase
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: During the validation phase, the validation test is applied to the transaction. This determines whether the transaction is allowed to proceed or not without causing a violation of serializability. "
+43,"4.	During the _______ phase, the local variables that hold the write operations are copied to the database
+a)	Read phase
+b)	Validation phase
+c)	Write phase
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: During the write phase, the local variables that hold the write operations are copied to the database. Read only operations omit this phase. "
+44,"5.	Read only operations omit the _______ phase
+a)	Read phase
+b)	Validation phase
+c)	Write phase
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Read only operations do not allow write operation to be performed on them. So, they omit the write phase but execute the read and validation phases. "
+45,"6.	Which of the following timestamp is used to record the time at which the transaction started execution?
+a)	Start(i)
+b)	Validation(i)
+c)	Finish(i)
+d)	Write(i)
+View Answer","Answer: a
+Explanation: There are three different timestamps for each transaction start(i), validation(i), finish(i). Start(i) is used to record the time at which the transaction execution started."
+46,"7.	Which of the following timestamps is used to record the time when a transaction has finished its read phase?
+a)	Start(i)
+b)	Validation(i)
+c)	Finish(i)
+d)	Write(i)
+View Answer","Answer: b
+Explanation: There are three different timestamps for each transaction start(i), validation(i), finish(i). The validation phase is used to record the time at which a transaction has finished its read phase and has started its validation phase."
+47,"8.	Which of the following timestamps is used to record the time when a database has completed its write operation?
+a)	Start(i)
+b)	Validation(i)
+c)	Finish(i)
+d)	Write(i)
+View Answer","Answer: c
+Explanation: There are three different timestamps for each transaction start(i), validation(i), finish(i). Finish(i) is used to record the time when a transaction has finished its write phase."
+48,"9.	State true or false: Locking and timestamp ordering force a wait or rollback whenever a conflict is detected.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Locking and timestamp ordering force a wait or rollback whenever a conflict is detected. This property is called pessimism of locking and timestamp protocols."
+49,"10.	State true or false: We determine the serializability order of validation protocol by the validation ordering technique
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: We determine the serializability order of the validation protocol by the timestamp ordering technique. There is no technique called as the validation ordering technique to determine the serializability order of the validation protocol. "
+50,"1.	In _______ schemes, each write operation creates a new version of Q
+a)	Multiversion
+b)	Snapshot isolation
+c)	Lock based
+d)	Timestamp
+View Answer","Answer: a
+Explanation: In multiversion schemes, each write operation creates a new version of Q. When a transaction issues a read operation, the concurrency control manager selects one of the versions of Q to be read. "
+51,"2.	If the first update is overwritten by a second, it is called as a _______ update
+a)	Useful
+b)	Overlapping
+c)	Lost
+d)	Concurrent
+View Answer","Answer: c
+Explanation: If the first update is overwritten by a second, it is called as a lost update. This generally occurs whenever two transactions are allowed to write on the database. "
+52,"3.	State true or false: Snapshot isolation prevents lost updates
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Snapshot isolation prevents lost updates because it does not allow two transactions to simultaneously write on the same database. "
+53,"4.	Which of the following is a variant of snapshot isolation
+a)	First committer wins
+b)	First updater wins
+c)	More than one of the mentioned
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: First committer wins and first updater wins are two different variations of snapshot isolation. "
+54,"5.	Under ________ the system uses locking mechanism that applies only to updates
+a)	First updater wins
+b)	First committer wins
+c)	First writer wins
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Under first updater wins, the system uses a locking mechanism that applies only to updates. Read operations do not get affected by this mechanism. "
+55,"6.	The situation in which each pair of transactions has read a data written by the other, but there is no data written by the transactions is called as _______
+a)	Deadlock
+b)	Read skew
+c)	Deadlock skew
+d)	Write skew
+View Answer","Answer: d
+Explanation: The situation in which each pair of transactions has read a data written by the other, but there is no data written by the transactions is called as write skew."
+56,"7.	Oracle uses __________ for the serializable isolation level
+a)	Multiversion scheme
+b)	Timestamp protocol
+c)	Lock based protocol
+d)	Snapshot isolation
+View Answer","Answer: d
+Explanation: Oracle uses snapshot isolation for the serializable isolation level. PostgreSQL also uses only snapshot isolation for the serializable isolation level. "
+57,"8.	State true or false: Snapshot isolation has low overhead
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Snapshot isolation is attractive in practice because it has a relatively very low overhead. "
+58,"9.	In ________ no two aborts occur unless two concurrent transactions update the same data item.
+a)	Multiversion scheme
+b)	Timestamp protocol
+c)	Lock based protocol
+d)	Snapshot isolation
+View Answer","Answer: d
+Explanation: In snapshot isolation no two aborts occur unless two concurrent transactions update the same data item. This makes snapshot isolation attractive but it does not ensure serializability. "
+59,"10.	Which of the following transactions can multiversion two phase locking protocol not differentiate.
+a)	Read only transactions
+b)	Update transactions
+c)	All of the mentioned
+d)	Double operator transactions
+View Answer","Answer: d
+Explanation: The multiversion two phase locking protocol cannot differentiate double operator transactions but it can differentiate between read only transactions and update transactions. "
+60,"1.	________ deletes a data item from a database
+a)	Delete(Q)
+b)	Insert(Q)
+c)	Drop(Q)
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Delete(Q) deletes a data item from a database. Insert(Q) inserts a new data item Q into the database and assign Q an initial value. "
+61,"2.	Which of the following does not lock the entire index
+a)	Phantom locking
+b)	Phantom problem
+c)	Index locking
+d)	Index problem
+View Answer","Answer: c
+Explanation: Index locking avoids locking the entire index. Any transaction that inserts a tuple into a relation must insert information into every index maintained on the relation. "
+62,"3.	Which of the following is included in the operational mechanism of the index locking protocol?
+a)	Every transaction must have at least one index
+b)	A transaction that performs a lookup must acquire a shared lock on all the index leaf nodes that it accesses
+c)	The rule of the two phase locking mechanism must be observed
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The operational mechanism of the index locking protocol includes, every transaction must have at least one index. A transaction that performs lookup must acquire a shared lock on all the index leaf nodes that it accesses. The rule of the two phase locking mechanism must be followed. "
+63,"4.	_________ is a form of two degree consistency designed for programs that iterate over tuples of a relation by using cursors.
+a)	Cursor stability
+b)	Serializability
+c)	Non-serializability
+d)	Predicate locking
+View Answer","Answer: a
+Explanation: Cursor stability is a form of two degree consistency designed for programs that iterate over tuples of a relation by using cursors. It ensures that the tuple that is currently being processed is locked in shared mode and any modified tuples are locked in exclusive mode until the transaction commits. "
+64,"5.	Transactions that involve user interactions are called __________
+a)	Validations
+b)	Conversations
+c)	Interfaces
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Transactions that involve user interactions are called as conversation. These are named differently to differentiate them from regular transactions. Validation using version numbers is very useful for such transactions. "
+65,"6.	 State true or false: Key value locking provides increased concurrency
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Key value locking provides increased concurrency. Using key value improperly however might cause phantom phenomenon to occur. "
+66,"7.	To prevent the phantom phenomenon, _______ is used
+a)	Key value locking
+b)	Next key locking
+c)	Previous key locking
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The failure of a system to prevent a non serialized tuple when two transactions conflict with each other is called as phantom phenomenon. To prevent the phantom phenomenon, the next key locking is used. "
+67,"8.	Which of the following does cursor stability ensure
+a)	The tuple that is currently being processed by the iteration is locked in shared mode
+b)	The tuple that is currently being processed is not locked in shared mode
+c)	Any modified tuples are not locked in exclusive mode
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Cursor stability ensures that the tuple that is currently being processed by the iteration is locked in shared mode and any modified tuples are locked in exclusive mode until the transaction commits. "
+68,"9.	State true or false: Exclusive locks are held until transaction commit in degree two consistency
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Exclusive locks are held until transaction commit in degree two consistency, no transaction can read an uncommitted value. "
+69,"1.	Which of the following can cause a transaction failure
+a)	Logical error
+b)	System error
+c)	More than one of the mentioned
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Logical errors and system errors are the two types of errors that can generally cause transaction failures. "
+70,"2.	If the transaction can no longer continue with its normal execution because of some internal condition, it is called as a _________
+a)	Logical error
+b)	System error
+c)	System crash
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: If the transaction can no longer continue with its normal execution because of some internal condition, it is called as a logical error such as bad input, data not found, overflow or resource limit exceeded. "
+71,"3.	If a system has entered and undesirable state due to which it is unable to continue with normal execution, it is called as _________
+a)	Logical error
+b)	System error
+c)	System crash
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If a system has entered and undesirable state due to which it is unable to continue with normal execution, it is called as a system error. The transaction however can be re-executed at a later time. "
+72,"4.	If there is a hardware malfunction or a bug in the database that causes the loss of content of volatile storage, it is called as ________
+a)	Logical error
+b)	System error
+c)	System crash
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: If there is a hardware malfunction or a bug in the database that causes the loss of content of volatile storage, it is called as a system crash. The data in the non-volatile storage remains intact and it is not corrupted. "
+73,"5.	The assumption that the hardware errors bring the system to a halt is called as ________
+a)	Halter assumption
+b)	Phantom assumption
+c)	Fail-stop assumption
+d)	Disk failure
+View Answer","Answer: c
+Explanation: The assumption that the hardware errors bring the system to a halt is called as fail-stop assumption. Well-designed systems have numerous internal checks that bring a system to a halt whenever there is an error. Hence, the fail stop assumption is a reasonable one. "
+74,"6.	Which of the following is not a classification of storage
+a)	Volatile storage
+b)	Nonvolatile storage
+c)	Stable storage
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: Volatile storage, non-volatile storage and stable storage are three different classifications of storage. Volatile storage is the least secure whereas stable storage is the most secure among them. "
+75,"7.	If a failure has occurred in the midst of a transfer, it is called as _________
+a)	Successful completion
+b)	Partial failure
+c)	Total failure
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If a failure has occurred in the midst of a transfer, it is called as partial failure. After a partial failure, the destination has incorrect information. "
+76,"8.	State true or false: The destination block has incorrect information in case of a total failure
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: In case of total failure, the failure occurs sufficiently early during the transfer that the destination block remains intact. Thus there is no corruption of data at the destination. "
+77,"9.	The partitions of the database into fixed length storage units are called as __________
+a)	Blocks
+b)	Tuples
+c)	Relations
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The database is partitioned into fixed length storage units called as blocks. Blocks are the units of data transfer and may contain several data items. "
+78,"10.	The blocks residing on the disk are referred to as ___________
+a)	Physical blocks
+b)	Buffer blocks
+c)	Disk blocks
+d)	Disk buffer
+View Answer","Answer: a
+Explanation: The blocks residing on the disk are referred to as physical blocks. The blocks residing temporarily in the main memory are referred to as buffer blocks. "
+79,"11.	The area of memory where blocks temporarily reside is called as ________
+a)	Block buffer
+b)	Disk buffer
+c)	Physical buffer
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The area of memory where blocks temporarily reside is called as the disk buffer. The disk buffer is used to store the buffer blocks which hold temporary data. "
+80,"1.	The most widely used structure for recording database modification is called as _______
+a)	Log
+b)	List
+c)	Queue
+d)	Stack
+View Answer","Answer: a
+Explanation: The most widely used structure for recording database modification is called as a log. The log is a sequence of log records recording all the update activities in the database. "
+81,"2.	An update log record describes a ________ database write
+a)	Single
+b)	Double
+c)	Triple
+d)	Quadruple
+View Answer","Answer: a
+Explanation: An update log record describes a single database write. It has four fields in it which are, transaction identifier, data-item identifier, old value, new value. "
+82,"3.	Which of the following fields does the update log record have?
+a)	Transaction identifier
+b)	Data-item identifier
+c)	Old value
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: An update log record describes a single database write. It has four fields in it. The update log record has a transaction identifier, data-item identifier, old value, new value. "
+83,"4.	The unique identifier of the transaction that performed the write operation is called as _______
+a)	Transaction identifier
+b)	Data-item identifier
+c)	Old value
+d)	New value
+View Answer","Answer: a
+Explanation: The unique identifier of the transaction that performed the write operation is called as transaction identifier. This is a field in the update log record. "
+84,"5.	The value of the data item prior to the write is called as _________
+a)	Transaction identifier
+b)	Data-item identifier
+c)	Old value
+d)	New value
+View Answer","Answer: c
+Explanation: The value of the data item prior to the write is called as old value. This is stored in the update log record. "
+85,"6.	If a transaction does not modify the database until it has committed it is said to use a  _______ modification technique
+a)	Deferred
+b)	Immediate
+c)	More than one of the mentioned
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation:  If a transaction does not modify the database until it has committed it is said to use a deferred modification technique. Deferred modification has the overhead that transactions need to make local copies of all updated data items. "
+86,"7.	We say that a transaction has been ________ when its commit log record has been output to stable storage.
+a)	Locked
+b)	Completed
+c)	Committed
+d)	Released
+View Answer","Answer: c
+Explanation: We say that a transaction has been committed when its commit log record has been output to stable storage. At that point, all the earlier records have already been output to stable storage. "
+87,"8.	State true or false: Using checkpoints reduces overhead
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Using checkpoints reduces overhead because the search process is time consuming and searching for transactions does not take place if we use checkpoints. "
+88,"9.	A __________ checkpoint is a checkpoint where transactions are allowed to perform updates even while buffer blocks are being written out.
+a)	Temporary
+b)	Fuzzy
+c)	Permanent
+d)	Recovery
+View Answer","Answer: b
+Explanation: A fuzzy checkpoint is a checkpoint where transactions are allowed to perform updates even while buffer blocks are being written out. "
+89,"10.	If the database modifications occur while the transaction is still active, the transaction is said to use the __________ modification technique
+a)	Deferred
+b)	Immediate
+c)	More than one of the mentioned
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If the database modifications occur while the transaction is still active, the transaction is said to use the immediate modification technique. Deferred modification has overhead whereas immediate modification doesn’t have any overhead. "

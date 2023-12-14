@@ -1,0 +1,3108 @@
+,Question,Answer
+0,"1.	 Choose the correct statement regarding superkeys
+a)	A superkey is an attribute or a group of multiple attributes that can uniquely identify a tuple
+b)	A superkey is a tuple or a set of multiple tuples that can uniquely identify an attribute
+c)	Every superkey is a candidate key
+d)	A superkey is an attribute or a set of attributes that distinguish the relation from other relations
+View Answer","Answer: a
+Explanation: A superkey is an attribute or a set of multiple attributes that can uniquely identify a tuple. It is used to differentiate between tuples."
+1,"2. What is an Instance of a Database?
+a)	The logical design of the database system
+b)	The entire set of attributes of the Database put together in a single relation
+c)	The state of the database system at any given point of time
+d)	The initial values inserted into the Database immediately after its creation
+View Answer","Answer: c
+Explanation: The state of the database system at any given point of time is called as an Instance of the database."
+2,"3. What is a foreign key?
+a)	A foreign key is a primary key of a relation which is an attribute in another relation
+b)	A foreign key is a superkey of a relation which is an attribute in more than one other relations
+c)	A foreign key is an attribute of a relation that is a primary key of another relation
+d)	A foreign key is the primary key of a relation that does not occur anywhere else in the schema
+View Answer","Answer: c
+Explanation: A foreign key is an attribute of a relation that is initially a primary key of another relation. A foreign key usage preserves referential integrity."
+3,"4. What action does  ⋈  operator perform in relational algebra
+a)	Output specified attributes from all rows of the input relation and remove duplicate tuples from the output
+b)	Outputs pairs of rows from the two input relations that have the same value on all attributes that have the same name
+c)	Output all pairs of rows from the two input relations (regardless of whether or not they have the same values on common attributes)
+d)	Return rows of the input relation that satisfy the predicate
+View Answer","Answer: a
+Explanation: ⋈ Outputs specified attributes from all rows of the input relation. Remove duplicate tuples from the output. The operation is called the join operation. "
+4,"5. What does the “x” operator do in relational algebra?
+a)	Output specified attributes from all rows of the input relation. Remove duplicate tuples from the output
+b)	Output pairs of rows from the two input relations that have the same value on all attributes that have the same name
+c)	Output all pairs of rows from the two input relations (regardless of whether or not they have the same values on common attributes)
+d)	Returns the rows of the input relation that satisfy the predicate
+View Answer","Answer: c
+Explanation: The “x” operator outputs all pairs of rows from the two input relations (regardless of whether or not they have the same values on common attributes). This operation is called as the Cartesian product operation and is similar to the Cartesian product of sets."
+5,"6. An attribute is a __________ in a relation.
+a)	Row
+b)	Column
+c)	Value
+d)	Tuple
+View Answer","Answer: b
+Explanation: An attribute is a column in a relation. A tuple is a row in a relation."
+6,"7. What is the method of specifying a primary key in a schema description?
+a)	By writing it in bold letters
+b)	By underlining it using a dashed line
+c)	By writing it in capital letters
+d)	By underlining it using a bold line
+View Answer","Answer: d
+Explanation: We can specify a primary key in schema description by underlining the respective attribute with a bold line."
+7,"8. Statement 1: A tuple is a row in a relation
+    Statement 2: Existence of multiple foreign keys in a same relation is possible
+a)	Both the statements are true
+b)	Statement 1 is correct but Statement 2 is false
+c)	Statement 1 is false but Statement 2 is correct
+d)	Both the statements are false
+View Answer","Answer: a
+Explanation: A tuple is a row is a relation. There can exist multiple foreign keys in the same relation because there can exist multiple attributes in the relation that are primary keys in two or more other relations."
+8,"9. Choose the option that correctly explains in words, the function of the following relational algebra expression
+σyear≥2009 (book  ⋈  borrow)
+a)	Selects all tuples from the Cartesian product of book and borrow
+b)	Selects all the tuples from the natural join of book and borrow wherever the year is lesser than 2009
+c)	Selects all the tuples from the natural join of book and student wherever the year is greater than or equal to 2009
+d)	Selects all tuples from the Cartesian product of book and borrow wherever the year is greater than or equal to 2009
+View Answer","Answer: b
+Explanation: The condition under the select statement represents the condition that must be satisfied by the tuples and the symbol ⋈  represents natural join between the two relations on either side of the operator."
+9,"10. State true or false: If a relation consists of a foreign key, then it is called a referenced relation of the foreign key dependency.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: If a relation has a foreign key, then it is called a referencing relation of the foreign key dependency."
+10,"1. Which of the following information does an SQL DDL not specify?
+a)	The schema for each relation
+b)	The integrity constraints
+c)	The operations on the tuples
+d)	The security and authorization information for each relation
+View Answer","Answer: c
+Explanation: The SQL DDL does not specify the operations that are supposed to be made on the tuples. DDL means Data definition language, hence it does not include the operations made."
+11,"2. Which of the following data types does the SQL standard not support?
+a)	char(n)
+b)	String(n)
+c)	varchar(n)
+d)	float(n)
+View Answer","Answer: b
+Explanation: The SQL standard does not support String(n) but it supports char, varchar and float."
+12,"3. Which command is used to create a new relation in SQL
+a)	create table( ,   …)
+b)	create relation( ,   …)
+c)	new table( ,   …)
+d)	new relation(  ,   …)
+View Answer","Answer: a
+Explanation: We use the create table command to create a new relation in the database. The syntax is
+		create table( ,   …);"
+13,"4. If a1, a2, a3 are attributes in a relation and S is another relation, which of the following is an incorrect specification of an integrity constraint?
+a)	primary key(a1, a2, a3)
+b)	primary key(a1)
+c)	foreign key(a1, a2) references S
+d)	foreign key(a1, a2)
+View Answer","Answer: d
+Explanation: Whenever the integrity constraint foreign key is mentioned, the attributes that are the foreign keys should always be referenced from the relation in which they are primary keys."
+14,"5. What is the syntax to load data into the database? (Consider D as the database and a, b, c as data)
+a)	enter into D (a, b, c);
+b)	insert into D values (a, b, c);
+c)	insert into D (a, b, c);
+d)	insert (a, b, c) values into D;
+View Answer","Answer: b
+Explanation: To load data into a database we use the insert into command. The syntax is
+	         insert into D values (a, b, c) where a, b, c are the appropriate values"
+15,"6.  Which of the following commands do we use to delete a relation (R) from a database?
+a)	drop table R
+b)	drop relation R
+c)	delete table R
+d)	delete from R
+View Answer","Answer: a
+Explanation: The drop table command is used to delete a relation from a database whereas the delete table removes all the tuples from a relation"
+16,"7. Which of the following commands do we use to delete all the tuples from a relation (R)?
+a)	delete table R
+b)	drop table R
+c)	delete from R
+d)	drop from R
+View Answer","Answer: c
+Explanation: The delete from command is used to delete all the tuples in a relation. The drop table totally deletes a relation. "
+17,"8. Choose the correct command to delete an attribute A from a relation R
+a)	alter table R delete A
+b)	alter table R drop A
+c)	alter table drop A from R
+d)	delete A from R
+View Answer","Answer: b
+Explanation: We can delete an attribute from a relation using the alter table command with the following syntax
+alter table  drop "
+18,"9. create table apartment(ownerID varchar (5), ownername varchar(25), floor numeric(4,0), primary key (ownerID));
+Choose the correct option regarding the above statement
+a)	The statement is syntactically wrong
+b)	It creates a relation with three attributes ownerID, ownername, floor in which floor cannot be null.
+c)	It creates a relation with three attributes ownerID, ownername, floor in which ownerID cannot be null.
+d)	It creates a relation with three attributes ownerID, ownername, floor in which ownername must consist of at least 25 characters.
+View Answer","Answer: c
+Explanation: It creates a relation apartment with three attributes as specified. The attribute ownername cannot be null because it is the primary key of the relation."
+19,"10. What does the notnull integrity constraint do?
+a)	It ensures that at least one tuple is present in the relation
+b)	It ensures that at least one foreign key is present in the relation
+c)	It ensures that all tuples have a finite value on a specified attribute
+d)	It ensures that all tuples have finite attributes on all the relations
+View Answer","Answer: c
+Explanation: The notnull integrity constraint ensures that all the tuples have a finite value on the specified attribute in the relation. It avoids the specification of null values."
+20,"1.	Which of the following syntax of the basic query is correct?
+a)	select <relation> from <attribute>
+b)	select <attribute> from <elation>
+c)	select <tuple> from <relation>
+d)	select <tuple> from <attribute>
+View Answer","Answer: b
+Explanation: The select clause is used to select a specific attribute from a given relation. So, the syntactically correct statement is select <attribute> from <relation>."
+21,"2.	Which of the following keywords is used beside the select clause to explicitly specify that duplicates are not removed?
+a)	all
+b)	not unique
+c)	notnull
+d)	include
+View Answer","Answer: a
+Explanation: The “all” keyword is used beside the select clause to explicitly specify that duplicates are not removed."
+22,"3.	Which of the following logical connectives is not included in SQL?
+a)	and
+b)	or
+c)	nor
+d)	not
+View Answer","Answer: d
+Explanation: “not” is not a logical connective included in the SQL. The and, or and nor are logical connectives that are included in SQL. "
+23,"4.	The where clause is a predicate involving attributes of the relation in the ______ clause.
+a)	select
+b)	from
+c)	with
+d)	none of the mentioned
+View Answer","Answer: b
+Explanation: The “from” clause contains the attribute names on which the “which” clause can be used on. "
+24,"5.	select distinct dept_name
+from institute;","Answer: b
+Explanation: The distinct keyword is used to explicitly force the elimination of duplicate tuples. Thus, the above query excludes duplicates. "
+25,"6.	What does the following query do?
+select name, ID, branch
+from student, department
+where student.branch = department.branch;
+a)	It gives all values of name, ID, branch from both the relations only if all those attributes are present in both
+b)	It gives all values of name, ID, branch from their respective relations
+c)	It gives the values of name, ID, branch from their respective relations where the values in the branch attribute are same
+d)	It gives the values of name, ID, branch from their respective relations where all the values are matching with each other
+View Answer","Answer: c
+Explanation: student.branch = department.branch verifies whether both the values of the attributes are same in both the relations and returns the value. "
+26,"7.	The ________ clause is used to list the attributes desired in the result of a query
+a)	select
+b)	from
+c)	where
+d)	create
+View Answer","Answer: a
+Explanation: The select clause is used to list the attributes desired in the result of a query."
+27,"8.	If we specify multiple relations in the from clause and do not specify any conditions in the where clause, what will the result be?
+a)	The natural join of both the relations
+b)	The left outer join of both the relations
+c)	A syntactical error
+d)	The Cartesian product of both the relations
+View Answer","Answer: d
+Explanation: If we specify multiple relations in the from clause and do not specify any conditions in the where clause, the default definition given by the from clause is the Cartesian product of the relations listed in the clause. So it returns all the possible combinations of the tuples of the two relations. "
+28,"9.	State true or false: Multiple conditions in the where clause are separated by a “,”
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Multiple conditions in the where clause are separated by the “and” keyword. "
+29,"10.	What does the natural join operation do?
+a)	It considers only those pairs of tuples that have the same value on those attributes that appear in the schemas of both relations
+b)	It considers only those pairs of tuples that have the same value on at least one of the attributes that appear in the schemas of both the relations
+c)	It considers only those pairs of tuples that do not have the same value on those attributes that appear in the schemas of both relations
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The natural join operation considers only those pairs of tuples that have the same value on those attributes that appear in the schemas of both the relations. The natural join operation operates on 2 relations and gives a relation as the result. "
+30,"11.	Observe the following query and choose the correct option.
+select name, ID
+from student natural join department natural join section
+a)	The query is syntactically wrong because there is no where clause
+b)	The query is syntactically wrong because there are more than one attributes in the select clause
+c)	The query is syntactically wrong because more than one relations are included in the natural join operation
+d)	The query is correct
+View Answer","Answer: d
+Explanation: The query is syntactically correct because, where clause is not necessary in a query, more than one attributes can be specified in the select clause and more than one relations may be operated on, using the natural join operator. "
+31,"12. Which keyword is used to rename a relation in a query?
+a)	rename
+b)	as
+c)	is
+d)	to
+View Answer","Answer: b
+Explanation: The “as” keyword is used to rename a relation in a query. This is used for convenience as long relation names can reduce readability. "
+32,"13.	While operating with strings, what does “_ _ _%” match with?
+a)	A string of three letters
+b)	A string of at least three letters
+c)	A string of three words
+d)	A string of at least three words
+View Answer","Answer: b
+Explanation: The string in the question matches with a string having at least three letters. The first three blank spaces indicate three letters whereas the percentage indicates indefinite spaces after that. "
+33,"1.	What is the function of the union operation?
+a)	It combines the results of any two different queries
+b)	It combines the results of two different queries which have the same set of attributes in the select clause
+c)	It combines the results of two different queries which have the same condition in the where clause
+d)	It gives the Cartesian product of the results of any 2 queries
+View Answer","Answer: b
+Explanation: The union operation combines the results of two different queries which have the same set of attributes in the select clause. It automatically eliminates duplicates. "
+34,"2.	What is the function of the intersect operation?
+a)	It returns the intersection of the results of the results of any two different queries
+b)	It returns the intersection of the results of two different queries which have the same set of attributes in the select clause
+c)	It returns the intersection of the results of two different queries which have the same condition in the where clause
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The intersect operation returns the intersection of the results of the results of two different queries which have the same set of attributes in the select clause. It automatically eliminates duplicates. "
+35,"3.	What is the function of the except operation?
+a)	It excludes all the results present in both the queries
+b)	It includes the results of the second query but excludes the results of the first query
+c)	It includes the results of the first query but excludes the results of the second query
+d)	It includes all the results of both queries but removes duplicates
+View Answer","Answer: c
+Explanation: The except operation includes the results of the first query but excludes the results of the second query. It automatically eliminates duplicates but if we want to retain duplicates we must use except all in place of except. "
+36,"4.	When does the predicate is null succeed?
+a)	If the value on which it is applied is finite
+b)	If the value on which it is applied is invalid
+c)	If the value on which it is applied is blank
+d)	If the value on which it is applied is more than the allowed limit
+View Answer","Answer: c
+Explanation: The is null predicate succeeds when the value on which it is applied is blank/null. "
+37,"5.	Using the _______ clause retains only one copy of identical tuples
+a)	distinct
+b)	is not null
+c)	no repeat
+d)	from
+View Answer","Answer: a
+Explanation: Specifying the distinct clause beside the select clause retains only one copy of identical tuples resulting from the query. "
+38,"6.	Observe the following query and choose the correct optiona)	The query is syntactically wrong
+b)	The query gives all the possible student names where a finite value exists for ID
+c)	The query gives the names of the students that have a null ID and it also excludes identical names
+d)	The query gives the student names where a finite value exists for ID and it excludes identical names
+View Answer","Answer: d
+Explanation: The distinct keyword is used to remove tuples that have identical values. The is not null clause checks only for ID’s that are not null values. "
+39,"7.	What will be the result of the following query?a)	All the values of the studentid for which section is c and roll < 10
+b)	All the values of the studentid for which section is c and roll > 10
+c)	All the values of the studentid for which section not c and roll < 10
+d)	All the values of the studentid for which section not c and roll > 10
+View Answer","Answer: b
+Explanation: The except operation excludes all the tuples that are present in the result of the second query from the result of the first query. It also excludes all duplicates from the relation. "
+40,"8.	Which of the following correctly describes the between predicate in the where clause?
+a)	It is used to check whether a value is in between two specified values
+b)	It is used to check whether a value is exactly in the center of the relation alphabetically
+c)	It is used to check whether a value is in between any two other values in the database
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The between predicate in the where clause is used to check whether a value is in between two externally specified values. This clause is used to list out all tuples having a value within a range. "
+41,"1.	Which of the following is not a built in aggregate function in SQL?
+a)	avg
+b)	max
+c)	total
+d)	count
+View Answer","Answer: c
+Explanation: SQL does not include total as a built in aggregate function. The avg is used to find average, max is used to find the maximum and the count is used to count the number of values. "
+42,"2.	Observe the given SQL query and choose the correct option.a)	The query is syntactically correct but gives the wrong answer
+b)	The query is syntactically wrong
+c)	The query is syntactically correct and gives the correct answer
+d)	The query contains one or more wrongly named clauses.
+View Answer","Answer: b
+Explanation: The query is syntactically wrong. The attribute in the group by clause must be one of the attributes specified in the select clause. "
+43,"3.	State true or false: SQL does not permit distinct with count(*)
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: SQL does not permit distinct with count(*) but the use of distinct is allowed with max and min. "
+44,"4.	We apply the aggregate function to a group of sets of tuples using the _______ clause.
+a)	group by
+b)	group
+c)	group set
+d)	group attribute
+View Answer","Answer: a
+Explanation: We apply the aggregate function to a group of sets of tuples using the group by clause. The group by clause must always be used whenever we are willing to apply the aggregate function to a group of sets of tuples. "
+45,"5.	Choose the correct option regarding the querya)	The having clause checks whether the query result is true or not
+b)	The having clause does not check for any condition
+c)	The having clause allows only those tuples that have average balance 10000
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The having clause is used to check for conditions that need to be set on aggregate functions."
+46,"6.	The _____ aggregation operation adds up all the values of the attribute
+a)	add
+b)	avg
+c)	max
+d)	sum
+View Answer","Answer: d
+Explanation: The sum aggregation operation adds up all the values of the specified attribute. There does not exist any aggregation such as add."
+47,"7.	State true or false: Any attribute which is present in the having clause without being aggregated must not be present in the group by clause.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Any attribute which is present in the having clause without being aggregated must be present in the group by clause. Otherwise, the query is considered to be erroneous."
+48,"8.	State true or false: We can rename the resulting attribute after the aggregation function has been applied
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Yes, we can rename the resulting attribute after the aggregation function has been applied by using a specific keyword."
+49,"9.	Which keyword is used to rename the resulting attribute after the application of the aggregation function?
+a)	rename
+b)	as
+c)	replace
+d)	to
+View Answer","Answer: b
+Explanation: The “as” keyword is used to rename the resulting attribute after the aggregation function has been applied. Just like any other renaming operation, the as keyword simplifies the name of the relation."
+50,"10.	What values does the count(*) function ignore?
+a)	Repetitive values
+b)	Null values
+c)	Characters
+d)	Integers
+View Answer","Answer: b
+Explanation: The count(*) aggregation function ignores null values while calculating the number of values in a particular attribute."
+51,"1.	What is a subquery?
+a)	A subquery is a select-from-where expression that is nested within another query
+b)	A subquery is any query that is nested within another query
+c)	A subquery is a relation that is externally specified which can be used to handle data in queries
+d)	A subquery is a condition that excludes all the invalid tuples from the database
+View Answer","Answer: a
+Explanation: A subquery is a select-from-where expression that is nested within another query. Common uses for sub-queries are to perform tests for set membership, make set comparisons etc. "
+52,"2.	If a set is a collection of values given by the select clause, The ______ connective tests for set membership
+a)	within
+b)	include
+c)	under
+d)	in
+View Answer","Answer: d
+Explanation: The in connective is used to test for the membership in a set, where the set is a collection of values given by the select clause."
+53,"3.	State true or false : Nested Subqueries cannot be used for comparing two different sets
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Nested Subqueries can be used for comparing two different sets. Set comparison is an important function of the nested sub-queries. "
+54,"4.	What is the result of the following query?a)	The query gives all the studnames for which marks are greater than all the students in section c
+b)	The query gives all the studnames for which the marks are greater than at least on student in section c
+c)	The query gives all the studnames for which the marks are less than all the students in section c
+d)	The query is syntactically incorrect
+View Answer","Answer: b
+Explanation: The “some” comparison is used to check for at least one condition. The > symbol is used to test whether the marks are greater than the right hand side or not. "
+55,"5.	 The ________ comparison checker is used to check “each and every” condition
+a)	all
+b)	and
+c)	every
+d)	each
+View Answer","Answer: a
+Explanation: The all comparison checker is used to check “each and every” condition. The “each” and “every” comparison checkers do not exist in SQL. "
+56,"6.	The ______ construct returns true if a given tuple is present in the subquery.
+a)	not exists
+b)	present
+c)	not present
+d)	exists
+View Answer","Answer: d
+Explanation: The exists construct returns true if a given tuple is present in the subquery. The not exists construct gives true if a given tuple is not present in the subquery."
+57,"7.	What is a correlated sub-query?
+a) An independent query that uses the correlation name of another independent query.
+b) A sub-query that uses the correlation name of an outer query
+c) A sub-query that substitutes the names of the outer query
+d) A sub-query that does not depend on its outer query’s correlation names
+View Answer","Answer: b
+Explanation: A correlated sub-query is the one that uses the correlation name of an outer query. "
+58,"8.	The _________ construct returns true if the argument in the sub-query is void of duplicates
+a)	not null
+b)	not unique
+c)	unique
+d)	null
+View Answer","Answer: unique
+Explanation: The unique construct returns true if the argument in the sub-query is void of duplicates. The not null construct avoids the specification of null values into the attribute. "
+59,"9.	State true or false: We can use Subqueries inside the from clause
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: SQL allows the use of Subqueries inside the from clause. The subquery used in the from clause must have in its result the attributes that are specified in the select clause."
+60,"10.	Choose the correct option regarding the following querya)	The query is syntactically wrong
+b)	The query gives the studentID of the student with the maximum marks
+c)	The query gives the maximum marks amongst all the students
+d)	The query gives all the studentID values except the student with the maximum marks
+View Answer","Answer: b
+Explanation: The query gives the studentID with the maximum marks because the max(marks) aggregation gives the maximum of the marks. "
+61,"11.	SQL subqueries that can occur wherever a value is permitted provided the subquery gives only one tuple with a single attribute are called _________
+a)	Exact Subqueries
+b)	Vector Subqueries
+c)	Positive Subqueries
+d)	Scalar Subqueries
+View Answer","Answer: d
+Explanation: SQL subqueries that can occur wherever a value is permitted provided the subquery gives only one tuple with a single attribute are called Scalar subqueries. Scalar Subqueries can be used in the SQL update statement when they are used under the set clause. "
+62,"1.	Insert the appropriate key word in the blank in the query ( A is a relation)
+delete ______ A
+where P < 5;
+a)	all
+b)	from
+c)	with
+d)	in
+View Answer","Answer: a
+Explanation: the from key word is specified beside delete clause to indicate the relation from which the tuple needs to be deleted. "
+63,"2.	How many relations can a delete command operate on?
+a)	0
+b)	1
+c)	2
+d)	Infinitely many
+View Answer","Answer: b
+Explanation: The delete command can operate only on one relation. You cannot give commands like delete R1, R2. "
+64,"3.	 What is the result of the following query?a)	The query deletes all the tuples whose marks are greater than the average marks
+b)	The query deletes all the tuples whose marks are less than the average marks
+c)	The query deletes all the values under the marks attribute which are less than the average
+d)	The query is syntactically wrong and does not execute
+View Answer","Answer: b
+Explanation: The query deletes all the tuples from the student relation as per the condition specified in the where clause i.e. wherever the marks are less than average marks. "
+65,"4.	What is the format of entering date into a database while inserting data into it?
+a)	YYYY-MM-DD
+b)	“YYYY-MM-DD”
+c)	‘YYYY-MM-DD’
+d)	“DD-MM-YYYY”
+View Answer","Answer: c
+Explanation: The correct format for entering date into the database while inserting data is
+‘YYYY-MM-DD’."
+66,"5.	Choose the correct option regarding the following querya)	Data is inserted into the course relation
+b)	Data is not inserted into the course relation due to incorrect specification
+c)	Data is inserted into the CS-67 relation
+d)	Data is not inserted due to the incorrect use of syntax
+View Answer","Answer: d
+Explanation: Data is not inserted because, the proper syntax is
+insert into <relation name> values (<data>);"
+67,"6.	To change a value in a tuple without changing all the values in the tuple, we use the _____ statement
+a)	insert
+b)	insert some
+c)	update
+d)	alter
+View Answer","Answer: c
+Explanation: To change a value in a tuple without changing the entire values in the tuple, we use the update statement. Eg: update employee set salary = salary*1.5; "
+68,"7.	What does the following query do?a)	It increases the marks of all the students by 10%
+b)	It decreases the marks of all the students by 90%
+c)	It increases the marks of all the students by 110%
+d)	It is syntactically wrong
+View Answer","Answer: a
+Explanation: The update clause is used to edit a specific value in the tuple. The set command is used to set the value of an attribute in a tuple."
+69,"8.	State true or false: We cannot write a where clause under an update command
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Writing a where clause under the update statement enables us to specify a condition for the selection of tuples whose values need to be updated. "
+70,"9.	Scalar Subqueries can be used in the SQL update statement when they are used under the ____ clause
+a)	where
+b)	with
+c)	set
+d)	end
+View Answer","Answer: c
+Explanation: SQL subqueries that can occur wherever a value is permitted provided the subquery gives only one tuple with a single attribute are called Scalar subqueries. Scalar Subqueries can be used in the SQL update statement when they are used under the set clause. "
+71,"10.	Which of the following cannot be used to modify the data in a database
+a)	update
+b)	insert
+c)	delete
+d)	drop
+View Answer","Answer: d
+Explanation: The drop keyword is used to delete the entire relation leaving no trace of it in the memory. Thus it cannot be used to edit the data in the relation. "
+72,"1.	The on condition appears at the _______ of the join expression
+a)	Beginning
+b)	End
+c)	Between
+d)	The on condition is not related to join expression
+View Answer","Answer: b
+Explanation: The on condition appears at the end of the join expression. Because it states the condition that the relations under the join operations get matched based on. "
+73,"2.	What is the difference between a join and an outer join operation?
+a)	There is no difference
+b)	Join preserves a few tuples that are otherwise lost in the outer join
+c)	Outer join preserves a few tuples that are otherwise lost in the join
+d)	An outer join can be used only on outer queries whereas a join operation can be used in Subqueries
+View Answer","Answer: c
+Explanation: The outer join operation preserves a few tuples that are otherwise lost in the join operation. The outer join operation preserves the tuples to the right of the operation. "
+74,"3.	The join operations that do not retain mismatched tuples are called as _________ operations
+a)	outer join
+b)	natural join
+c)	full outer join
+d)	inner join
+View Answer","Answer: d
+Explanation: The join operations that do not retain mismatched tuples are called as inner join operations. The inner join operations do not preserve any tuples that are otherwise preserved in the outer join operation. "
+75,"4.	What is the function of a left outer join?
+a)	It preserves tuples only in the relation named before the operation
+b)	It preserves tuples only in the relation named after the operation
+c)	It preserved tuples in the relations named on both the sides of the operation
+d)	It does not preserve any tuples on either side of the relation
+View Answer","Answer: a
+Explanation: The left outer join operation preserves the tuples named before the operation. "
+76,"5.	What is the function of a full outer join?
+a)	It preserves tuples only in the relation named before the operation
+b)	It preserves tuples only in the relation named after the operation
+c)	It preserved tuples in the relations named on both the sides of the operation
+d)	It does not preserve any tuples on either side of the relation
+View Answer","Answer: c
+Explanation: The full outer join operation preserves the tuples named on both the sides of the operation. Unlike the inner join, outer joins preserve tuples from either or both sides of the operation. "
+77,"6.	What is the function of a right outer join?
+a)	It preserves tuples only in the relation named before the operation
+b)	It preserves tuples only in the relation named after the operation
+c)	It preserved tuples in the relations named on both the sides of the operation
+d)	It does not preserve any tuples on either side of the relation
+View Answer","Answer: b
+Explanation: The right outer join operation preserves the tuples named after the operation. "
+78,"7.	What is the function of inner join?
+a)	It preserves tuples only in the relation named before the operation
+b)	It preserves tuples only in the relation named after the operation
+c)	It preserved tuples in the relations named on both the sides of the operation
+d)	It does not preserve any tuples on either side of the relation
+View Answer","Answer: d
+Explanation: The join operations that do not retain mismatched tuples are called as inner join operations. The inner join operation does not preserve any tuples on either side of the relation. "
+79,"8.	State true or false: on and where behave differently for outer join
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The on condition is a part of the outer join syntax but the where clause isn’t. "
+80,"9.	Which off the following is not a valid type of join?
+a)	left outer join
+b)	outer join
+c)	join
+d)	full join
+View Answer","Answer: d
+Explanation: There is no such join called as full join. There is a full outer join but a full join does not exist. "
+81,"10.	If a left outer join is performed and the tuple on the left hand side does not match with the tuple on the right hand side, what happens to the values that are preserved on the left hand side?
+a)	They are given null values
+b)	They are given a random value
+c)	The user is asked to enter data
+d)	The query is declared invalid by the compiler
+View Answer","Answer: a
+Explanation: If a left outer join is performed and the tuple on the left hand side does not match with the tuple on the right hand side, the remaining values are given a null value. "
+82,"1.	What is a view?
+a)	An brief description of the schema diagram.
+b)	A relation that is not a part of the schema but is a virtual relation
+c)	Any relation that is a part of the schema
+d)	A relation that is a part of the schema but which needs to be specified in every operation made on that particular relation.
+View Answer","Answer: b
+Explanation: A relation that is not a part of the schema but is a virtual relation is called as view. Views improve writability as viewing the entire logical model is not feasible. "
+83,"2.	What is the command used to define view in SQL?
+a)	define view
+b)	new view
+c)	create view
+d)	none of the mentioned
+View Answer","Answer: c
+Explanation: We use the create view command to define a view in SQL. "
+84,"3.	create view studentdet
+select ID, address, name
+from student;","Answer: d
+Explanation: immediately after specifying the name of the view, we have to write the “as” keyword. So this query does not give any result as it is syntactically incorrect. "
+85,"4.	State true or false: One view can be used in the expression defining another view
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: One view can be used to define another view in its expression. This further improves the writability of the code as we are reducing the entire logical model. "
+86,"5.	If the actual relations used in the view definition change, the view is updated immediately. Such views are called _________
+a)	Instant views
+b)	Instantaneous views
+c)	Materialistic views
+d)	Materialized views
+View Answer","Answer: d
+Explanation: If the actual relations used in the view definition change, the view is updated immediately. Such views are called Materialized views. Materialized views help to keep the database up-to-date. "
+87,"6.	The process of maintaining views up to date is called _________
+a)	View maintenance
+b)	View updating
+c)	View materialization
+d)	View isolation
+View Answer","Answer: a
+Explanation: The process of maintaining views up to date is called View maintenance. View maintenance can be done immediately when any of the views is updated. "
+88,"7.	How can we insert data into a view?
+a)	insert into  ();
+b)	create data  values ();
+c)	enter  ();
+d)	insert into  values ();
+View Answer","Answer: d
+Explanation: We can insert data into a view using the inset into values (); statement. This operation can be done only if the view is updatable. "
+89,"8.	State true or false: We can update a view if it has multiple database relations in the from clause
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: We can update a view only if it has a single database relation in the “from” clause."
+90,"9.	The _______ statement makes the updates performed by the transaction permanent.
+a)	Finalize work
+b)	Finish work
+c)	Commit work
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The Commit work statement makes the updates performed by the transaction permanent. After a transaction is committed, a new transaction is automatically started. "
+91,"10.	The _______ statement causes the statements to undo all the updates performed on the transaction
+a)	Undo work
+b)	Rollback work
+c)	Commit work
+d)	Replace work
+View Answer","Answer: b
+Explanation: The Rollback work statement causes the statements to undo all the updates performed on the transaction. The database is then restored to the state of what it was before the first statement of the transaction was executed. "
+92,"1.	Which of the following is not an integrity constraint?
+a)	not null
+b)	unique
+c)	identical
+d)	check
+View Answer","Answer: c
+Explanation: Identical is not an allowed integrity constraint in SQL. Not null prevents null values and unique only allows unique values to be entered. Check checks for a given condition. "
+93,"2.	What is the function of the not null constraint?
+a)	It prevents illegal data from being entered into the database
+b)	It ensures that data is entered into the database
+c)	It ensures that the data entered is unique
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The not null constraint ensures that data is entered into the database. It displays an error message whenever a data field mentioned is left empty. "
+94,"3.	What is the function of the unique constraint?
+a)	It ensures that no two values under an attribute are identical
+b)	It ensures that all the attributes are perfectly unique in their data type
+c)	It ensures that all the relations in the database have a unique set of attributes
+d)	It does not have any function in SQL
+View Answer","Answer: a
+Explanation: The purpose of the unique clause is to ensure that no two values under the same attribute are identical. Primary keys are unique by default. "
+95,"4.	What is the functions of on delete cascade?
+a)	It is used to delete a tuple in a table
+b)	It is used to specify the precise attribute that needs to be deleted in a single relation.
+c)	It is used to preserve referential integrity in a relation
+d)	It is used to execute sub-queries in the from clause.
+View Answer","Answer: c
+Explanation: It is used to preserve referential integrity in the relation. When an attribute of a relation is the foreign key in another relation, deleting it causes referential integrity problems. The on delete cascade solves this problem by forcing us to delete the foreign key first. "
+96,"5.	What does the following condition do?
+check( name in( ‘Ryan’, ‘Cristiano’, ‘Leo’))
+a)	The condition checks whether the name attribute includes the three mentioned names
+b)	The condition allows the name attribute to possess only the three mentioned names
+c)	The condition checks whether the given names are sub-strings in at least one of the values
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The check clause allows the attribute to take only those values that are explicitly specified by the user inside the parentheses after the in key word. "
+97,"6.	Referential integrity constraints are also called as _________
+a)	Functional dependencies
+b)	Subset dependencies
+c)	Superset dependencies
+d)	Primary dependencies
+View Answer","Answer: b
+Explanation: Referential integrity constraints are also called as subset dependencies. It is called so because the set of foreign key values in r1 of r2 must be a subset of the set of primary key values in r2. "
+98,"7.	________  is a predicate that we expect the database to always satisfy
+a)	Assertion
+b)	Reason
+c)	Mandate
+d)	Verify
+View Answer","Answer: a
+Explanation: An assertion is a predicate that we expect the database to always satisfy. Domain constraints and referential integrity constraints are special forms of assertions. "
+99,"8.	State true or false: Oracle does not support complex check conditions
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Most of the widely used database management systems including oracle currently do not support complex check conditions. "
+100,"9.	What statement is used to define a new assertion in SQL?
+a)	create  check ;
+b)	create assertion  where ;
+c)	create  where ;
+d)	create assertion  check ;
+View Answer","Answer:  d
+Explanation: We use “create assertion  check ;” statement to create a new assertion in a relation. "
+101,"1.	Which of the following is not a valid Date and Time data type?
+a)	date
+b)	time
+c)	datestamp
+d)	timestamp
+View Answer","Answer: c
+Explanation: datestamp is not a valid Date and Time data type. Timestamp exists but datestamp does not exist in SQL."
+102,"2.	What is a timestamp?
+a)	A combination of date and time with date first
+b)	A combination of date and time with time first
+c)	A combination of time and place with time first
+d)	A combination of time and place with place first
+View Answer","Answer: a
+Explanation: A timestamp is a combination of date and time with date first.
+Eg: ‘2002-04-25 10:20:04.43’."
+103,"3.	What does p indicate in the following data type?
+time(p)
+a)	The amount of delay that needs to be added to the time
+b)	The number of fractional digits for the seconds
+c)	The maximum number of allowed hours
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The p in the parentheses indicates the number of fractional digits for seconds."
+104,"4.	What is a default value?
+a)	It is a value that automatically creates a primary key
+b)	It is a value that cannot be altered during insertion of values in the tuple
+c)	It is a value that is initially loaded into the attribute
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: A default value is a value that is initially loaded into the attribute. All the tuples have the default value in the attribute for which it is specified in case any value is not externally specified. "
+105,"5.	Which of the following is an illegal data type in SQL
+a)	number
+b)	clob
+c)	blob
+d)	lint
+View Answer","Answer: lint
+Explanation: clob and blob are called large object data types. They can be used to store values that can go to the size of gigabytes. Number is used to store the basic integer data type. "
+106,"6.	State true or false: Users can define new data types in SQL
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: SQL allows the creation of new data types using the “create type  as  final;” statement."
+107,"7.	What does the following statement do?
+create table temp_inst like institute
+a)	It creates a new relation temp_inst with all the tuples and attributes of the institute relation
+b)	It creates a new relation temp_inst with the same schema as that of the institute relation
+c)	It creates a new relation named temp_inst with institute as its only attribute
+d)	It does not create any relations and returns an error
+View Answer","Answer: b
+Explanation: The create table like statement creates a new relation which has a schema identical to that of the specified relation after the like keyword."
+108,"8.	Which of the following is a privilege in SQL standard?
+a)	select
+b)	insert
+c)	update
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The SQL standard includes the privileges select, insert, update and delete. This privilege set can be granted or revoked among the users. "
+109,"9.	The _________ statement is used in SQL to confer authorization.
+a)	grant
+b)	confer
+c)	implement
+d)	permit
+View Answer","Answer: a
+Explanation: The grant statement is used in SQL to confer authorization. It has the syntax
+grant <privileges> on <relation name> to <user list>;"
+110,"10.	revoke select on takes from amit;
+What does the above query perform?
+a)	It revokes all authorizations from amit
+b)	It revokes select authorization from amit
+c)	It revokes takes authorization from amit
+d)	It gives an error
+View Answer","Answer: b
+Explanation: The query mentions the revoking of the select privilege. So, the query revokes the select authorization from amit. "
+111,"1.	Which of the following is/are a function of dynamic SQL?
+a)	Allowing a program to construct an SQL query in a character string
+b)	Submitting the query
+c)	Retrieving the result into the program variables a tuple at a time
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Dynamic SQL allows the program to construct the queries in character string format, it submits them, and then retrieves the data into the program variables one tuple at a time."
+112,"2.	What is the full form of JDBC?
+a)	Java Database Connectivity
+b)	Java Database Co-Operation
+c)	JSP Database Committee
+d)	Java Database Creation
+View Answer","Answer: a
+Explanation: The full form of JDBC is Java Database Connectivity. This full form is no longer widely used and the abbreviation is mostly used everywhere. "
+113,"3.	State true or false: Developers cannot write their own functions into SQL
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Developers can write their own functions into SQL by using the create function statement. "
+114,"4.	Which of the following are not a part of PL/SQL
+a)	Triggers
+b)	Packages
+c)	Functions
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: All the three mentioned features i.e. triggers, functions, packages are a part of PL/SQL. "
+115,"5.	The part of SQL that deals with the SQL supports constructs is called as _______
+a)	Persistent construct dealer
+b)	Persistent storage module
+c)	Persistent supports center
+d)	Primary storage medium
+View Answer","Answer: b
+Explanation: The part of SQL that deals with the SQL supports constructs is called as Persistent Storage Module (PSM). The SQL supports construct give it almost all the power of a general purpose programming language. "
+116,"6.	A _________ is a statement that the system executes whenever a database is modified
+a)	Trigger
+b)	Function
+c)	Package
+d)	Protocol
+View Answer","Answer: a
+Explanation: A trigger is a statement that the system executes whenever a database is modified. Immediately after the specified modification of the database is complete, the trigger statement gets executed and then the execution is continued."
+117,"7.	State true or false: Recursive queries are permitted in SQL
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Recursive queries can be used in SQL in order to verify a condition repeatedly. SQL allows recursive queries. "
+118,"8.	How many different types of drivers are present in JDBC?
+a)	1
+b)	2
+c)	3
+d)	4
+View Answer","Answer: d
+Explanation: There are four types of JDBC drivers which are named JDBC Type 1,2,3,4 drivers respectively. "
+119,"9.	Which JDBC Driver is the most efficient of all the JDBC drivers?
+a)	Type 1 Driver
+b)	Type 2 Driver
+c)	Type 3 Driver
+d)	Type 4 Driver
+View Answer",Answer: The JDBC type 4 driver is the most efficient of all the JDBC drivers. This is an all Java driver and hence is the most efficient. 
+120,"10.	Which package comprises of the core JDBC API?
+a)	java.sql
+b)	java.database
+c)	sql.java
+d)	java.relation
+View Answer","Answer: a
+Explanation: The java.sql package comprises of the core JDBC API. JDBC is an application program interface which contains all the functions to link and execute database functions in Java. "
+121,"1.	What is the full form of OLAP?
+a)	Online Application Programming
+b)	Online Application Processing
+c)	Online Analytical programming
+d)	Online Analytical Processing
+View Answer","Answer: d
+Explanation: The full form of OLAP is Online Analytical Processing. It is an interactive system that gives various features to analysts."
+122,"2.	Data that can be modelled as dimension attributes and measure attributes are called ___________
+a)	Mono-dimensional data
+b)	Multi-dimensional data
+c)	Measurable data
+d)	Efficient data
+View Answer","Answer: b
+Explanation: Data that can be modelled as dimension attributes and measure attributes are called multi-dimensional data."
+123,"3.	The operation of changing a dimensions used in a cross-tab is called as ________
+a)	Alteration
+b)	Pivoting
+c)	Piloting
+d)	Renewing
+View Answer","Answer: b
+Explanation: We can change the dimensions used in a cross tab. The operation of changing a dimensions used in a cross-tab is called as pivoting."
+124,"4.	The operation of moving from finer granular data to coarser granular data is called _______
+a)	Reduction
+b)	Increment
+c)	Roll up
+d)	Drill down
+View Answer","Answer: c
+Explanation: OLAP systems permit users to view the data at any level of granularity. The process of moving from finer granular data to coarser granular data is called as roll-up."
+125,"5.	How many dimensions of multi-dimensional data do cross tabs enable analysts to view?
+a)	1
+b)	2
+c)	3
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation:  Cross-tabs enable analysts to view two dimensions of multi-dimensional data, along with the summaries of the data."
+126,"6.	The  _______ function allows substitution of values in an attribute of a tuple
+a)	Cube
+b)	Unknown
+c)	Decode
+d)	Substitute
+View Answer","Answer: c
+Explanation:  The decode function allows substitution of values in an attribute of a tuple. The decode function does not always work as we might like for null values because predicates on null values evaluate to unknown."
+127,"7.	Which of the following OLAP systems do not exist?
+a)	HOLAP
+b)	MOLAP
+c)	ROLAP
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: HOLAP means Hybrid OLAP, MOLAP means multidimensional OLAP, ROLAP means relational OLAP. This means all of the above OLAP systems exist."
+128,"8.	State true or false: OLAP systems can be implemented as client-server systems
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: OLAP systems can be implemented as client-server systems. In fact most of the current OLAP systems are implemented as client-server systems."
+129,"9.	The operation of moving from coarser granular data to finer granular data is called _______
+a)	Reduction
+b)	Increment
+c)	Roll back
+d)	Drill down
+View Answer","Answer: d
+Explanation: OLAP systems permit users to view the data at any level of granularity. The process of moving from finer granular data to coarser granular data is called as drill-down."
+130,"10.	State true or false: In OLAP, analysts cannot view a dimension in different levels of detail.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: In OLAP, analysts cannot view a dimension in different levels of detail. The different levels of detail are classified into a hierarchy."
+131,"1.	Which of the following is not a relational algebra function?
+a)	Select
+b)	Project
+c)	Manipulate
+d)	Union
+View Answer","Answer: c
+Explanation: There does not exist any operation named as manipulate operation in relational algebra. The union gives the union of two sets. Project is similar to select in SQL and select is similar to where in SQL."
+132,"2.	The select operation’s function in relational algebra is identical to the _______ clause in SQL
+a)	where
+b)	from
+c)	select
+d)	none of the mentioned
+View Answer","Answer: a
+Explanation: The select operation’s function in relational algebra is identical to the where clause in SQL standard. It is therefore used to check for a particular condition."
+133,"3.	The project operation’s function in relational algebra is identical to the _______ clause in SQL
+a)	where
+b)	from
+c)	select
+d)	none of the mentioned
+View Answer","Answer: c
+Explanation: The project operation’s function in relational algebra is identical to the select clause in SQL standard. It is used to list the attributes that are to be displayed."
+134,"4.	What does the following relational operation perform?
+ρx(A1,A2,A3…) (E)
+a)	It returns the result of expression E with the previous attribute names
+b)	It returns the result of expression E renaming the attributes as A1, A2, …
+c)	It returns the result of the relation E but saves the old attributes
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If a relational-algebra expression E has arity n, then the above expression returns the result of expression E under the name X, and with the  attributes renamed to A1 , A2 , …., An."
+135,"5.	What does the following relational algebra expression do?
+σamount > 1200 (loan)
+a)	Finds all the tuples in loan
+b)	Finds the tuples in loan where the amount is greater than 12000
+c)	Finds all the tuples in loan where the amount is greater than 1200
+d)	Finds all the amounts in loan where the number of values is greater than 1200
+View Answer","Answer: c
+Explanation: The above expression finds all the tuples in loan wherever the amount is greater than 1200. Because the condition specifies that the amount should be greater than 1200."
+136,"6.	How is the left outer join symbol represented in relational algebra?
+a)	⟕
+b)	⟖
+c)	⟗
+d)	⋈
+View Answer","Answer: a
+Explanation: The symbol of the left outer join is similar to the symbol of the natural join but it has two dashes on the top and bottom left side."
+137,"7.	How is the right outer join symbol represented in relational algebra?
+a)	⟕
+b)	⟖
+c)	⟗
+d)	⋈
+View Answer","Answer: b
+Explanation: The symbol of the right outer join is similar to the symbol of the natural join but it has two dashes on the top and bottom right side."
+138,"8.	Πcustomer_name, loan_number, amount (borrower ⋈loan)
+What does the above expression perform?
+a)	It finds the customer_name, loan_number and amount from borrower
+b)	It finds the customer_name, loan_number and amount from loan
+c)	It finds the customer_name, loan_number and amount from the full outer join of borrower and loan
+d)	It finds the customer_name, loan_number and amount from the natural join of borrower and loan
+View Answer","Answer: d
+Explanation: The above relational algebra expression finds the customer_name, loan_number and amount from the natural join of borrower and loan as the attributes are written next to the project symbol and the relation to be extracted from is mentioned in the parentheses which is the natural join of borrower and loan."
+139,"9.	Updating, Deleting and Inserting in relational algebra is done using the ________ operator
+a)	Assignment
+b)	Modification
+c)	Alteration
+d)	Inclusion
+View Answer","Answer: a
+Explanation: Updating, Deleting and Inserting in relational algebra is done using the assignment operator."
+140,"10.	State true or false: There exists a division operator in Relational Algebra
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The division is a binary operation that is labeled as R ÷ S. The result consists of the restrictions of tuples in R to the attributes unique to R, i.e., in the relation R but not in the relation S."
+141,"11.	The collections on which aggregate functions can operate are called as __________
+a)	Multisets
+b)	Multivalues
+c)	Multicollections
+d)	Multivariables
+View Answer","Answer: a
+Explanation: The collections on which aggregate functions can operate are called as multisets. Sets are a special case of multisets."
+142,"1.	The _________ of the entity set is an actual collection of entities belonging to that entity set.
+a)	Extension
+b)	Intention
+c)	Description
+d)	Availability
+View Answer","Answer: a
+Explanation: The extension of the entity set is an actual collection of entities belonging to that entity set. "
+143,"2.	A ___________ is an association among several entities.
+a)	Relationship
+b)	Association
+c)	Set
+d)	Combination
+View Answer","Answer: a
+Explanation: A relationship is an association among several entities. A relationship specifies how two entities are related."
+144,"3.	The attributes of a relationship are called as _________ attributes
+a)	Relational
+b)	Conjunctive
+c)	Descriptive
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: A relationship may also have attributes. These attributes are called as descriptive attributes. "
+145,"4.	What are composite attributes?
+a)	They are those attributes which cannot be further divided into other attributes
+b)	They are those attributes which can further be divided into other attributes
+c)	They are those attributes which are essentially the primary keys of the relation
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Composite attributes are the ones which can be further divided into other attributes whereas simple attributes cannot be divided into other attributes. "
+146,"5.	Let E be an entity set in a relationship set R. If every entity in E participates in at least one relationships in R, Then the participation of E in R is __________
+a)	Partial
+b)	Total
+c)	Complete
+d)	Incomplete
+View Answer","Answer: Total
+Explanation: Let E be an entity set in a relationship set R. If every entity in E participates in at least one relation in R, Then the participation of E in R is total. "
+147,"6.	Let E be an entity set in a relationship set R. If only some entities in E participate in relationships in R, Then the participation of E in R is __________
+a)	Partial
+b)	Total
+c)	Complete
+d)	Incomplete
+View Answer","Answer: Total
+Explanation: Let E be an entity set in a relationship set R. If only some entities in E participate in relationships in R, Then the participation of E in R is partial. "
+148,"7.	State true or false: We cannot specify keys in the Entity-Relationship model
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Keys can be specified in the entity-relationship model to uniquely identify the entity in the entity set. "
+149,"8.	State true or false: Multiple attributes combined together can be primary keys
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: A primary key is an attribute or a set of attributes that can uniquely identify a tuple in a relation. So, this means that multiple attributes can be combined to uniquely identify a tuple in a relation. "
+150,"9.	Which of the following is a good database management practice?
+a)	Adding redundant attributes
+b)	Removing redundant attributes
+c)	Not specifying primary keys
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Removing redundant attributes from a relation makes data extraction more efficient and faster. Thus, it is a good database management technique. "
+151,"1.	Which of the following symbols represent entity sets in an ER diagram?
+a)	Divided rectangles
+b)	Diamonds
+c)	Lines
+d)	Undivided rectangles
+View Answer","Answer: a
+Explanation: Rectangles divided into two parts represent entity sets in an ER diagram. The upper rectangle contains the name of the entity sets. And the lower rectangle contains the attributes. "
+152,"2.	 Which of the following symbols represent relationship sets in an ER diagram
+a)	Divided rectangles
+b)	Diamonds
+c)	Lines
+d)	Undivided rectangles
+View Answer","Answer: b
+Explanation: Diamonds represent relationship sets in an ER diagram. Relationship sets define how two entity sets are related in a database."
+153,"3.	What do double diamonds represent in an ER diagram
+a)	They link entity sets to relationship sets
+b)	Total participation of an entity in a relationship set
+c)	Relationship sets linked to weak entity sets
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The double diamonds represent the relationship sets linked to weak entity sets. Weak entity sets are the sets that do not have a primary key. "
+154,"4.	What does a directed line ( →  )  from a relationship set to two entity sets mean?
+a)	One-one
+b)	Many-one
+c)	Many-many
+d)	One-many
+View Answer","Answer: a
+Explanation: A directed line ( →  )  from a relationship set to two entity sets means that there is a one-one cardinality between two entity sets. "
+155,"5.	How are roles specified in an ER diagram
+a)	By labelling the rectangles
+b)	By labelling the diamonds
+c)	Roles cannot be specified in an ER diagram
+d)	By labelling the lines
+View Answer",Answer: E-R diagrams can include role indicators. Roles can be specified in an ER diagram by labelling the lines. 
+156,"6.	How is the discriminator of a weak entity set specified?
+a)	Using a solid line
+b)	Circling it
+c)	Using a dashed line
+d)	Drawing a square around it
+View Answer","Answer: c
+Explanation: A discriminator of a weak entity set can be specified by underlining it with a dashed line. "
+157,"7.	An entity set that has a primary key is called as ___________
+a)	Strong entity set
+b)	Weak entity set
+c)	Complete entity set
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: An entity set that has a primary key is called as a strong entity set. An entity set that does not have a primary key is called a weak entity set. "
+158,"8.	The relationship associating the weak entity sets with the identifying entity set is called as ________
+a)	Identifying relationship
+b)	Connecting relationship
+c)	Completing relationship
+d)	Unique relationship
+View Answer","Answer: a
+Explanation: The relationship associating the weak entity sets with the identifying entity set is called as an Identifying relationship. An identifying set is a many to one from the weak entity set to the identifying entity set. "
+159,"9.	State true or false: Every weak entity set must be associated with an identifying entity
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Every weak entity set must be associated with an identifying entity. The weak entity is then said to be existence dependent on the identifying entity set. "
+160,"10.	State true or false: A weak entity can participate in all the relationships.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: It cannot participate in all the relationships. A weak entity set can only participate in relationships other than the identifying relationship. "
+161,"1.	For schemas derived from strong entity sets, the _______ of the entity set serves as the primary key of the resulting schema
+a)	First attribute
+b)	Primary key
+c)	Foreign key
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: For schemas derived from strong entity sets, the primary key of the entity set serves as the primary key of the resulting schema. This is because the primary keys are to be preserved as they are unique."
+162,"2.	State true or false: Derived attributes cannot be directly represented in the relational data model
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Derived attributes cannot be directly represented in the relational data model. Instead, they are represented as methods. "
+163,"3.	The primary key of the representation of a weak entity set consists of the primary key of the strong entity set and the _______
+a)	Discriminator of the weak entity set
+b)	Foreign key
+c)	Primary key of all the other entity sets
+d)	All the attributes of the weak entity set
+View Answer","Answer: a
+Explanation: The primary key of the representation of a weak entity set consists of the primary key of the strong entity set and the discriminator of the weak entity set. "
+164,"4.	For a binary many to many relationship, the ________ of the participating entity sets becomes the prime attribute
+a)	Intersection of primary keys
+b)	Primary key of either one
+c)	Union of primary keys
+d)	Primary key on the many side
+View Answer","Answer: c
+Explanation: For a binary many to many relationship, the union of the primary keys of the participating entity sets becomes the prime attribute. "
+165,"5.	For a binary one to one relationship, the ________ of the participating entity sets becomes the prime attribute
+a)	Intersection of primary keys
+b)	Primary key of either one
+c)	Union of primary keys
+d)	Primary key on the many side
+View Answer","Answer: b
+Explanation: For a binary one to one relationship, the primary key of either one of the participating entity sets becomes the prime attribute."
+166,"6.	For a binary many to many relationship, the ________ of the participating entity sets becomes the prime attribute
+a)	Intersection of primary keys
+b)	Primary key of either one
+c)	Union of primary keys
+d)	Primary key on the many side
+View Answer","Answer: d
+Explanation: For a binary many to many relationship, the primary key on the many side of the participating entity sets becomes the prime attribute."
+167,"7.	For a n-ary relationship set without arrows, the ________ of the participating entity sets becomes the prime attribute
+a)	Intersection of primary keys
+b)	Primary key of either one
+c)	Union of primary keys
+d)	Primary key on the many side
+View Answer","Answer: c
+Explanation: For a binary many to many relationship, the union of the primary keys of the participating entity sets becomes the prime attribute. "
+168,"8.	State true or false: The schema for the relationship set linking a weak entity set to its corresponding strong entity set is redundant.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The schema for the relationship set linking a weak entity set to its corresponding strong entity set is redundant and it need not be present in the relational database design derived from an ER diagram. "
+169,"9.	Statement 1: We can create foreign key constraints on relational schema derived from ER diagram
+Statement 2: Relational schema cannot be derived from an ER diagram
+a)	Both the statements are true
+b)	Both the statements are false
+c)	Statement 1 is true and Statement 2 is false
+d)	Statement 2 is true and statement 1 is false
+View Answer","Answer: c
+Explanation: We can create foreign key constraints on relational schema derived from ER diagram and also it is possible to derive relational schema from ER diagrams. "
+170,"10.	Which of the following can affect the placement of the relationship attributes?
+a)	Alphabetical order
+b)	The data in the attribute
+c)	Cardinality ratio
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The cardinality ratio of a relationship can affect the placement of relationship attributes. The placement of the relationship attributes are not dependent on the alphabetical orderor the data in the attribute. "
+171,"1.	The process of designating sub groupings within the entity set is called as _______
+a)	Specialization
+b)	Division
+c)	Aggregation
+d)	Finalization
+View Answer","Answer: a
+Explanation: The process of designating sub-groupings within the entity set is called as specialization. Specialization allows us to distinguish among entities. "
+172,"2.	State true or false: Specialization can be applied only once
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation:  We can apply specialization multiple times to refine a design. An entity set may also be specialized by more than one distinguishing feature. "
+173,"3.	Which of the following is the specialization that permits multiple sets
+a)	Superclass specialization
+b)	Disjoint specialization
+c)	Overlapping specialization
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Overlapping specialization is the type of specialization that permits multiple sets. But disjoint specialization does not permit multiple sets. Disjoint specialization permits at most one set."
+174,"4.	The similarities between the entity set can be expressed by which of the following features?
+a)	Specialization
+b)	Generalization
+c)	Uniquation
+d)	Inheritance
+View Answer","Answer: b
+Explanation: The similarities between the entity set can be expressed by the generalization feature. It is a containment o the relationship that exists between a higher level entity set and one or more lower level entity sets."
+175,"5.	Higher level entity sets are designated by the term _________
+a)	Sub class
+b)	Super class
+c)	Parent class
+d)	Root class
+View Answer","Answer: b
+Explanation: Higher level entity sets can also be designated by the term super class. In the similar manner lower level entity sets can also be designated by the term sub class. "
+176,"6.	State true or false: The attributes of the higher level entity sets are inherited by the attributes of the lower level entity sets
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The attributes of the higher level entity sets are inherited by the attributes of the lower level entity sets. But the inverse is not true in this case. "
+177,"7.	Which of the following is not a generalization constraint?
+a)	Condition-defined
+b)	User defined
+c)	Disjoint
+d)	Machine defined
+View Answer","Answer: d
+Explanation: Machine definition is not a generalization constraint. Condition defined, user defined, disjoint and overlapping are 4 generalization constraints. "
+178,"8.	Condition defined generalization constraint is also said to be ________
+a)	Attribute defined
+b)	Constraint defined
+c)	Value defined
+d)	Undefined
+View Answer","Answer: a
+Explanation: Condition defined generalization constraint is also said to be attribute defined."
+179,"9.	If each higher level entity belongs to the lower level entity, then what kind of generalization is it?
+a)	Modal generalization
+b)	Partial generalization
+c)	Total generalization
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: If each higher level entity belongs to the lower level entity then it is called as total generalization. It is also called as total specialization. If some higher level entities do not belong, it is called as partial generalization."
+180,"10.	________ is an abstraction through which relationships are treated as higher level entities
+a)	Creation
+b)	Superseding
+c)	Attribute separation
+d)	Aggregation
+View Answer","Answer: d
+Explanation: One limitation of E-R model is that it cannot express relationships among relationships. Thus for this purpose, aggregation is used. Aggregation is an abstraction through which relationships are treated as higher level entities. "
+181,"1.	Which of the following is not a feature of a good relational design?
+a)	Specifying primary keys
+b)	Specifying foreign keys
+c)	Preserving integrity constraints
+d)	Allowing redundancy of attributes
+View Answer","Answer: d
+Explanation: Allowing redundancy of attributes makes it very difficult for data extraction. So, It is not a good relational design feature. "
+182,"2.	The dependency rules specified by the database designer are known as _______
+a)	Designer dependencies
+b)	Database rules
+c)	Functional dependencies
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The dependency rules specified by the database designer are known as functional dependencies. The normal forms are based on functional dependencies. "
+183,"3.	If the decomposition is unable to represent certain important facts about the relation, then such a decomposition is called as?
+a)	Lossless decomposition
+b)	Lossy decomposition
+c)	Insecure decomposition
+d)	Secure decomposition
+View Answer","Answer: b
+Explanation: If the decomposition is unable to represent certain important facts about the relation, then such a decomposition is called as lossy decomposition. Lossy decompositions should be avoided as they result in the loss of data. "
+184,"4.	If the decomposition is able to represent all the facts about the relation then such a decomposition is called as?
+a)	Lossless decomposition
+b)	Lossy decomposition
+c)	Insecure decomposition
+d)	Secure decomposition
+View Answer","Answer: a
+Explanation: If the decomposition is able to represent all the facts about the relation then such a decomposition is called as a lossless decomposition. Lossless decompositions are generally preferred. "
+185,"5.	A domain whose elements are indivisible is called as ______
+a)	Unique domain
+b)	Proxy domain
+c)	Atomic domain
+d)	Multiple domain
+View Answer","Answer: c
+Explanation: A domain is said to be atomic if all of its elements are considered to be indivisible. If the domains are atomic, then the relational schema is in the first normal form. "
+186,"6.	If all the domains are atomic then the relational schema is in ________ normal form
+a)	1
+b)	2
+c)	3
+d)	4
+View Answer","Answer: a
+Explanation: If all the domains are atomic then the relational schema is in first (1) normal form. That is, the domains must be indivisible. "
+187,"7.	State true or false: Composite attributes have non-atomic domains.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Composite attributes have non atomic domains i.e. domains of the composite attributes are generally divisible. "
+188,"8.	State true or false: Redundancy is desired in a relational schema
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Redundancy is never desired in a relational schema, it makes data retrieval very difficult. "
+189,"1.	An instance of a relation that satisfies all real world constraints is known as?
+a)	Proper relation
+b)	Ideal relation
+c)	Perfect relation
+d)	Legal relation
+View Answer","Answer: d
+Explanation: A relation that satisfies all the real world constraints is called as a legal relation. An instance of a legal relation is called as a legal instance. "
+190,"2.	If K → R then K is said to be the _______ of R
+a)	Candidate key
+b)	Foreign key
+c)	Super key
+d)	Domain
+View Answer","Answer: c
+Explanation: If K →  R then k is said to be the superkey of R i.e. K uniquely identifies every tuple in the relation R. "
+191,"3.	X →  Y holds on a schema k(K) if?
+a)	At least one legal instance satisfies the functional dependency
+b)	No legal instance satisfies the functional dependency
+c)	Each and every legal instance satisfies the functional dependency
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: X →  Y holds on a schema k(K) if each and every legal instance satisfies the functional dependency. Even if one instance does not satisfy the functional dependency X→ Y does not hold on a schema. "
+192,"4.	X→ Y is trivial if?
+a)	X ⊂ Y
+b)	Y ⊂ X
+c)	X ⊇ Y
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: X→ Y is said to be trivial if X is a subset of Y. Thus X ⊂ Y implies X→Y is trivial."
+193,"5.	Which of the following is not a condition for X→  Y in Boyce codd normal form?
+a)	X →  Y is trivial
+b)	X is the superkey for the relational schema R
+c)	Y is the superkey for the relational schema R
+d)	All of the mentioned
+View Answer","Answer: c
+Explanation: Y does not need to be a superkey of the relation for the given functional dependency to satisfy BCNF. X→ Y must be trivial and X must be the superkey of the relation R. "
+194,"6.	Which of the following is used to express database consistency?
+a)	Primary keys
+b)	Functional dependencies
+c)	Check clause
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Primary keys, Functional dependencies, Check clause are all used to express database consistency. "
+195,"7.	Which of the following is not a condition for the third normal form in the case of XY?
+a)	X→ Y is trivial
+b)	X is the superkey for R
+c)	Each attribute in Y-X is a candidate key for R
+d)	Each attribute in X-Y is a candidate key for R
+View Answer","Answer: d
+Explanation: Each attribute in X-Y is a candidate key for R is not a necessary condition for the third normal form in the case of X →  Y. X→Y is trivial and X is the superkey of R are necessary conditions for the third normal form. "
+196,"8.	F+  is called as the ________ of F
+a)	Closure
+b)	Sum
+c)	Cartesian product
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: F+ is called as the closure of F. It contains all the possible combinations of a functional dependency set in it. "
+197,"9.	State true or false: A functional dependency must first satisfy the second normal form to satisfy the third normal form.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: A functional dependency must first satisfy the second normal form to satisfy the third normal form. The second normal form must in turn satisfy first normal form. "
+198,"10.	State true or false: The fourth normal form does not exist and it is instead called as the BCNF.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: The fourth normal form exists and is different from the Boyce Codd normal form which is called as BCNF. "
+199,"1.	A functional dependency f on R is _______  by a set of functional dependencies F on r if every instance of r(R) that satisfies f also satisfies F.
+a)	Logically Defined
+b)	Logically Derived
+c)	Logically implied
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Given a set F of functional dependencies on a schema, we can prove that certain other functional dependencies also hold on that schema. We say such FDs are logically implied by F. A functional dependency f on R is logically implied by a set of functional dependencies F on r if every instance of r(R) that satisfies F also satisfies f. "
+200,"2.	If F is a set of functional dependencies, then the closure of F is denoted by?
+a)	F*
+b)	Fo
+c)	F+
+d)	F
+View Answer","Answer: c
+Explanation: If F is a set of functional dependencies, then the closure of F is denoted by F+. It is the set of all functional dependencies logically implied by F. "
+201,"3.	If a functional dependency is reflexive, B is a subset of A and A is the set of attributes, then
+a)	B→A holds
+b)	A→B holds
+c)	AB→C holds
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If a functional dependency is reflexive, B is a subset of A and A is the set of attributes, then A→B holds. This is called the reflexivity rule of Armstrong’s axioms. "
+202,"4.	State true or false: Armstrong’s axioms allow us to generate all F+ for any given F
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Armstrong’s axioms allow us to generate all F+ for any given F and hence are called complete. "
+203,"5.	Armstrong axioms are called sound because?
+a)	They are expensive
+b)	They cannot generate correct functional dependencies
+c)	They allow us to generate the complete closure
+d)	They cannot generate incorrect functional dependencies
+View Answer","Answer: d
+Explanation: Armstrong’s axioms are called as sound axioms because they do not generate incorrect functional dependencies. "
+204,"6.	State true or false: Functional dependencies are transitive
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: All functional dependencies are transitive. This is the transitivity rule of Armstrong’s axioms."
+205,"7.	If A→B, A→ C then which of the following is true?
+a)	A→BC
+b)	A→B
+c)	A→C
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Applying the union rule to the given question, we get, A→BC is true. The other two options are specified in the question itself. "
+206,"8.	If B is an attribute and A→B, Then B is said to be ________ by a.
+a)	Logically implied
+b)	Functionally implied
+c)	Logically determined
+d)	Functionally determined
+View Answer","Answer: d
+Explanation: If B is an attribute and A→B, Then B is said to be functionally determined by a. "
+207,"9.	We say that a decomposition having the property F’+ = F+ is a __________ decomposition.
+a)	Dependency losing
+b)	Dependency preserving
+c)	Lossless
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: We say that a decomposition having the property F’+ = F+ is a dependency preserving decomposition. "
+208,"10.	A  _________ Fc for F is a set of dependencies such that F logically implies all dependencies in Fc, and Fc logically implies all dependencies in F.
+a)	Canonical cover
+b)	Complete cover
+c)	Canonical dependency
+d)	Canonical clause
+View Answer","Answer: a
+Explanation: A Canonical cover Fc for F is a set of dependencies such that F logically implies all dependencies in Fc, and Fc logically implies all dependencies in F. In Fc, no functional dependency should contain an extraneous attribute and each left side of functional dependency should be unique. "
+209,"1.	What does the BCNF decomposition algorithm do?
+a)	States a method to decompose a relation satisfying BCNF
+b)	States a method for joining two relations satisfying BCNF
+c)	States a method to decompose a relational schema such that there are no multiple occurrences
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: If a relation is not in BCNF, it can be decomposed into simpler relations that are in BCNF. The BCNF decomposition algorithm states a method to decompose a relation satisfying BCNF. "
+210,"2.	The 3NF decomposition algorithm is also called as _______
+a)	3NF normal algorithm
+b)	3NF synthesis algorithm
+c)	3NF generator
+d)	Functional dependence algorithm
+View Answer","Answer: b
+Explanation: The 3NF decomposition algorithm is also called as 3NF synthesis algorithm since it takes a set of dependencies and adds one schema at a time, instead of decomposing the initial schema repeatedly. "
+211,"3.	Which of the following is desirable in a database design with functional dependencies?
+a)	BCNF
+b)	Losslessness
+c)	Dependency preservation
+d)	All of the mentioned
+View Answer","Answer: A good database design must satisfy BCNF, must be lossless, must be dependency preserving. These are the goals of database design with functional dependency."
+212,"4.	State true or false: SQL specifies a way of mentioning functional dependencies
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: SQL does not specify a way to mention functional dependencies. Functional dependencies are just used for theoretical improvement of database while implementing them in SQL later. "
+213,"5.	State true or false: Most current database systems do not support constraints on materialized view
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Most current database systems do not support constraints on materialized view. "
+214,"6.	Multi valued dependencies are also called as __________
+a)	Equality generating dependencies
+b)	Tuple generating dependencies
+c)	Multi-purpose dependencies
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Multi valued dependencies are also called as tuple generating dependencies because they require other tuples of a certain form to be present in the relation. "
+215,"7.	Functional dependencies are sometimes referred to as ________
+a)	Equality generating dependencies
+b)	Tuple generating dependencies
+c)	Multi-purpose dependencies
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Functional dependencies are sometimes referred to as equality generating dependencies because they require other tuples of a certain form to be present in the relation. "
+216,"8.	The _______ is a set of all functional and multi values dependencies implied by a set of functional dependencies
+a)	Star
+b)	Closure
+c)	Derivation
+d)	Evolution
+View Answer","Answer: b
+Explanation: The closure is a set of all functional and multi values dependencies implied by a set of functional dependencies on a given relation. It is denoted by giving a “+” superscript. "
+217,"9.	State true or false: If a relational schema is in _______ NF and A is a subset of R and B is also a subset of R then it is that A is a superkey is a trivial multi values dependency.
+a)	1
+b)	2
+c)	3
+d)	4
+View Answer","Answer: d
+Explanation: If a relational schema is in 4NF and A is a subset of R and B is also a subset of R then it is that A is a superkey is a trivial multi values dependency. "
+218,"10.	Which of the following normal forms does not exist?
+a)	BCNF
+b)	PJNF
+c)	5NF
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: All of the mentioned normal forms i.e. BCNF, PJNF, 5NF exist. BCNF is Boyce Codd normal form, 5NF is the fifth normal form and PJNF is project join normal form. "
+219,"1.	Which of the following is not a process of generating a good relational schema?
+a)	Converting ER diagrams to relational schema
+b)	Decomposing the relational schema while satisfying functional dependencies
+c)	Joining multiple relations together to form a single relation containing all the attributes
+d)	A design of relations which is then tested and modified to satisfy given normal forms
+View Answer","Answer: c
+Explanation: Joining multiple relations together to form a single relation containing all the attributes is not a method for the development of good relational schema because it might violate the normal forms if it is combined. "
+220,"2.	What is unique role assumption?
+a)	The attribute name has a unique meaning in the database
+b)	The attributes are all unique
+c)	No two tuples have even a single same value in a relation
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Unique role assumption means that the attribute names must have unique meaning in the database. This prevents us from using the same attribute to mean different things in different schemas. "
+221,"3.	The process of making a normalized schema unnormalized is called as _________
+a)	Unnormalization
+b)	Denormalization
+c)	Renormalization
+d)	Annormalization
+View Answer","Answer: b
+Explanation: The process of making a normalized schema unnormalized is called as denormalization. Designers use it to tune performance of systems to support time-critical operations."
+222,"4.	State true or false: Crosstabs are not desirable in a database design
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Crosstabs may be useful for the users but they are not desirable in a database system because the queries would get more complicated due to the addition of cross tabs."
+223,"5.	The data that have a time interval associated with them during which they are valid are called as  ________
+a)	Timed data
+b)	Temporal data
+c)	Model data
+d)	Clocked data
+View Answer","Answer: b
+Explanation: The data that have a time interval associated with them during which they are valid are called as Temporal data. We use the term snapshot to mean the value of the data at a particular point in time. "
+224,"6.	The value of the data at a particular time is called as?
+a)	Instance
+b)	Picture
+c)	Snapshot
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The value of the data at a particular time is called as a snapshot. This is used in temporal data. "
+225,"7.	Functional dependencies that have a time associated with them during which they are valid are called as________
+a)	Timed functional dependencies
+b)	Clocked functional dependencies
+c)	Temporal functional dependencies
+d)	Modeled functional dependencies
+View Answer","Answer: c
+Explanation: Functional dependencies that have a time associated with them during which they are valid are called as temporal functional dependencies. All snapshots of the relation should satisfy the functional dependency for it to be a temporal functional dependency. "
+226,"8.	State true or false: Overlapping time intervals cannot be prevented
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: IF a system supports a native valid time type, then the system can detect and prevent overlapping time intervals."
+227,"9.	Which of the following is the time of temporal data that record when a fact was recorded in a database?
+a)	Transaction time
+b)	Valid time
+c)	Enter time
+d)	Exit time
+View Answer","Answer: a
+Explanation: The transaction time is the time of temporal data that records when a fact was recorded in a database. "
+228,"10.	To specify the foreign keys in relations referencing temporal data we need to specify _______
+a)	The time interval
+b)	The Boolean value for the working
+c)	The integer corresponding to the relation number
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: To specify the foreign keys in relations referencing temporal data we need to specify the time interval. The time interval specification thus preserves referential integrity in the relation. "
+229,"1.	Browsers use a standardized syntax called?
+a)	TCP/IP
+b)	HTML
+c)	XML
+d)	Java
+View Answer","Answer: b
+Explanation: The Hypertext Markup Language [HTML] is the standardized syntax used by the browsers which supports formatted information as well as forms based interfaces. "
+230,"2.	A ______ is a globally unique name for every document that can be accessed on the Web
+a)	ID
+b)	UCL
+c)	URL
+d)	UML
+View Answer","Answer: c
+Explanation:  A URL (Uniform resource locator) is a globally unique name for every document that can be accessed on the Web."
+231,"3.	What is the full form of HTTP?
+a)	Hyper Text Trial Program
+b)	Hyper Text Transfer Protocol
+c)	Hyper Text Technology Protocol
+d)	Hyper Text Trial Protocol
+View Answer","Answer: b
+Explanation: HTTP – Hyper Text Transfer Protocol. This is aprotocol for transferring HTML documents. "
+232,"4.	A ______ is a program running on the server which accepts requests from a browser and sends HTML documents
+a)	Web server
+b)	Web transmitter
+c)	Web intermediate
+d)	Web multitasker
+View Answer","Answer: a
+Explanation: A Web Server is a program running on the server which accepts requests from a browser and sends HTML documents. The browser and the web server communicate via HTTP. "
+233,"5.	What is the use of CGI?
+a)	It specifies the path of data transfer
+b)	It specifies how the server communicates with the application programs
+c)	It charts out error handling procedures in case an error arises
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: CGI specifies how the server communicates with application programs. The application program communicates with a database server in order to get data. "
+234,"6.	The extra information of a site maintained at the client end is called as _______
+a)	Cookie
+b)	Password
+c)	History
+d)	Sessions
+View Answer","Answer: a
+Explanation: The extra information of a site maintained at the client end is called as cookie. It is a small piece of text containing identifying information with an associated name. "
+235,"7.	State true or false: HTTP is connectionless
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: HTTP is connectionless because most computer have a limit on the simultaneous connections they can accommodate. If this limit is exceeded then access is denied to further users. "
+236,"8.	What is the full form of CGI?
+a)	Common graphics interface
+b)	Common gateway interface
+c)	Common gateway internet
+d)	Common gateway information
+View Answer","Answer: b
+Explanation: The full form of CGI is Common Gateway Interface. This defines how a web server communicates with an application program. "
+237,"9.	Which of the following functions are done by a web server?
+a)	Accept requests from a web browser
+b)	Sends back results in HTML
+c)	Executes programs with arguments supplied by the user
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: A web server accepts requests from a web browser and sends back results in HTML. The most important feature of a web server is to execute programs with arguments supplied by the user. "
+238,"10.	What is the function of the cascading style sheet
+a)	Allows us to edit the HTML document
+b)	It is an IDE that allows us to write HTML codes more efficiently
+c)	It allows us to use the same style on multiple HTML documents
+d)	It acts as an intermediary to provide a variety of information services
+View Answer","Answer: c
+Explanation: The cascading style sheet allows us to use the same style sheet on multiple HTML documents allowing us to maintain a distinctive but uniform look on all the pages of a Web site. "
+239,"1.	The _______ specification defines an application programming interface for communication between the server and the application program
+a)	Java Servlet
+b)	JDBC
+c)	Java Applet
+d)	Java Swing
+View Answer","Answer: a
+Explanation: The java servlet specification defines an application programming interface for communication between the server and the application program. The HttpServlet class in Java implements the servlet API specification. "
+240,"2.	State true or false: Servlets are used to generate dynamic responses to HTTP requests.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Servlets are used to generate dynamic responses to HTTP requests. The task of a servlet is to process a request dynamically. "
+241,"3.	Which of these functions is not a part of the servlet lifecycle
+a)	Checking if an instance of servlet exists or not
+b)	Invoking the service method of the servlet
+c)	Shutting down the servlet
+d)	Pausing the servlet for a given period of time.
+View Answer","Answer: d
+Explanation: Pausing the servlet for a given amount of time is not a part of the servlet lifecycle. A servlet can be checked, invoked and destroyed but it cannot be paused. "
+242,"4.	Which of the following application servers do not provide built in support for servlets?
+a)	Tomcat server
+b)	Glassfish
+c)	JBoss
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: All of the mentioned application servers provide built in support for servlets. Glassfish and Tomcat are the most prominently used application servers. "
+243,"5.	What is the full form of JSP?
+a)	Java servlet program
+b)	Java server pages
+c)	Java server pages
+d)	Java server program
+View Answer","Answer: b
+Explanation: The full form of JSP is Java Server Pages. It is a scripting language that allows HTML programmers to mix static HTML with dynamically generated HTML. "
+244,"6.	While using Javascript, the browser parses the HTML code into a tree like structure defined by a standard called ________
+a)	DOS
+b)	DOD
+c)	DOM
+d)	DON
+View Answer","Answer: c
+Explanation: While using Javascript, the browser parses the HTML code into a tree like structure defined by a standard called Document Object Model (DOM). Javascript code can modify the tree structure to carry out certain operations. "
+245,"7.	Javascript is used to create dynamic webpages using technologies that are collectively called ________
+a)	Ajax
+b)	Thor
+c)	Dynamo
+d)	Achilles
+View Answer","Answer: a
+Explanation: Javascript is used to create dynamic webpages using technologies that are collectively called Ajax. "
+246,"8.	What are scripting languages?
+a)	The programming languages that pre decide the web page content
+b)	The programming languages that are simpler and offer same protection
+c)	The programming languages that trade off simplicity for protection.
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Scripting languages are those languages that are simpler with enriched user interface features but offer the same protection as that of Java. "
+247,"9.	What are client side scripting languages?
+a)	The languages designed to be executed on the client’s web browser
+b)	The languages designed to be executed on the server
+c)	The languages designed to reduce the amount of data costs incurred at the client end
+d)	The languages designed to be executed in multiple computers paralleled with each other
+View Answer","Answer: a
+Explanation: Client side scripting languages are those languages that are designed to be executed on the client’s web browser. These languages provide constructs that can be embedded with an HTML document. "
+248,"10.	State true or false: Executing programs at the client side is slower than executing programs on the server
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Executing programs on the client side is faster than executing programs on the server which includes sending every interaction to the server. "
+249,"1.	Which of the following is true regarding the model-view- controller architecture?
+a)	The model corresponds to the business logic layer
+b)	The view defines the presentation of data
+c)	The controller receives events, executes actions on the model and returns a view
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: In the model-view-controller architecture, the model corresponds to the business logic layer, the view defines the way data is presented and the controller receives events, executes actions on the model and returns a view. "
+250,"2.	The ___________ provides a high level view of data and actions on data
+a)	Business-logic layer
+b)	Data access layer
+c)	Data transfer layer
+d)	Business manager layer
+View Answer","Answer: a
+Explanation: The Business-logic layer provides a high level view of data and actions on data. An object oriented approach is used to code this layer. "
+251,"3.	The _________ layer provides the interface between the business logic layer and the underlying database
+a)	Business-logic layer
+b)	Data access layer
+c)	Data transfer layer
+d)	Business manager layer
+View Answer","Answer: b
+Explanation: The data-access layer provides the interface between the business logic layer and the underlying database. The data access layer provides the mapping from the object oriented data model to the relational model. "
+252,"4.	What are workflows in a business logic layer?
+a)	They describe how a particular task that involves servers is handled
+b)	They describe how multiple tasks involving a single participant is handled
+c)	They describe how a particular task involving multiple participants is handled.
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Business logic includes workflows. Workflows in a business logic layer describe how a particular task involving multiple participants is handled. "
+253,"5.	State true or false: The code implementing the actions in the business logic layer ensures that business rules are followed
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The code implementing the actions in the business logic layer ensures that business rules are followed. For example a student can only enroll in a course if the prerequisites are completed. "
+254,"6.	What is the full form of JSON?
+a)	JavaScript Object Native
+b)	JavaScript Object Notation
+c)	JavaScript Object Negation
+d)	Java Object Notation
+View Answer","Answer: b
+Explanation: JSON – JavaScript Object Notation. This is an encoding for javascript objects. "
+255,"7.	Which of the following features does Rapid Application Development possess?
+a)	Provide a library of functions to generate UI elements
+b)	Provide drag and drop features in a n IDE
+c)	Auto generation of code for the user interface from a declarative specification
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The main features of Rapid Application development are to provide a library of functions for GUI development, to provide drag and drop features in an IDE, Auto-generation of code for the user interface from a declarative specification. "
+256,"8.	Which of the following is not a web application development framework feature?
+a)	An object oriented model
+b)	A declarative way of specifying a form with validation constraints
+c)	Creating mass servers for effective handling of data
+d)	A template scripting system
+View Answer","Answer: c
+Explanation: Creating mass servers for effective handling of data is not a part of the web application development framework feature. "
+257,"9.	What are report generators?
+a)	They are the tools to generate human readable reports from a database
+b)	They are the tools that generate reports on the statistics of the database usage
+c)	They are the tools that prevent database querying and instead they generate pie charts and graphs
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Report generators are the tools to generate human readable reports from a database. They integrate querying the database with the creation of formatted text and summary charts. "
+258,"10.	Which of the following methods is used to reduce overhead?
+a)	Connection pooling
+b)	Parallel Processing
+c)	Caching Query Results at the server
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: To reduce overhead, any of the following methods can be used. Connection pooling, Parallel processing or caching query results at the server. Caching query results at the server enables to reduce the number of database accesses every time a similar request is sent. "
+259,"1.	If an attacker manages to get an application to execute an SQL query created by the attacker, then such attacks are called as _________
+a)	SQL attacks
+b)	SQL injection attacks
+c)	SQL usage attack
+d)	SQL destroyer attack
+View Answer","Answer: b
+Explanation: If an attacker manages to get an application to execute an SQL query created by the attacker, then such attacks are called as SQL injection attacks. "
+260,"2.	An attack on a website that stores and displays text to a user is known as ______ attack
+a)	SQL attack
+b)	XSS attack
+c)	XRP attack
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: An attack on a website that stores and displays text to a user is known as XSS attack. It is called as cross site scripting attack. "
+261,"3.	The URL of the page that had the link that the user clicked to access the page is called as _____
+a)	Source
+b)	Linker
+c)	Leaker
+d)	Referrer
+View Answer","Answer: d
+Explanation: The URL of the page that had the link that the user clicked to access the page is called as referrer. The HTTP protocol allows the server to check the referrer. "
+262,"4.	State true or false: Password leakage is a major security problem
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Password leakage is a major security problem because the leaked password grants access to malicious visitors. "
+263,"5.	The system where two independent pieces of data are used to identify a user is called as ______
+a)	Two system authentication
+b)	ID password authentication
+c)	Two factor authentication
+d)	Multi data authentication
+View Answer","Answer: c
+Explanation: The system where two independent pieces of data are used to identify a user is called as two-factor authentication. The two factors should not share a common vulnerability. "
+264,"6.	What are man in the middle attacks?
+a)	Users are forced to use a second server which causes the attack
+b)	Users are forced to divert to a fake site where the attack takes place
+c)	Users are fooled by similar GUI and data is extracted from them.
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Man in the middle attacks are those attacks in which the users are forced to divert to a fake site where the attack takes place. The fake site is then used to obtain the data from the user. "
+265,"7.	What are phishing attacks?
+a)	Users are forced to use a second server which causes the attack
+b)	Users are forced to divert to a fake site where the attack takes place
+c)	Users are fooled by similar GUI and data is extracted from them.
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Phishing attacks are those attacks in which users are fooled by similar GUI and data is extracted from them. The fake site is then used to obtain the data from the user. "
+266,"8.	What is the standard for exchanging authentication and authorization information between two different security domains?
+a)	SABM
+b)	STML
+c)	SPTA
+d)	SAML
+View Answer","Answer: d
+Explanation: SAML (Security assertion Markup Language) is the standard for exchanging authentication and authorization information between two different security domains. This provides a cross-organization sign-on. "
+267,"9.	A log of all changes to the application data is called as __________
+a)	Audit trail
+b)	Audit log
+c)	Audit lead
+d)	Data log
+View Answer","Answer: a
+Explanation: A log of all changes to the application data is called as audit trail. This helps us maintain security as it tracks all the breaches on the system. "
+268,"10.	Which of the following is a valid encryption technique?
+a)	Parallel key encryption
+b)	Public key encryption
+c)	Systematic key encryption
+d)	All of the mentioned
+View Answer","Answer: b
+Explanation: Out of the given options, only public key encryption is a valid approach to an encryption technique. In this, there are two different keys to encrypt the data. "
+269,"1.	Statement 1: Cache storage is very fast
+Statement 2: Cache storage is very cheap
+a)	Both the statements are true
+b)	Statement 1 is true but statement 2 is false
+c)	Statement 1 is false but statement 2 is true
+d)	Both the statements are false
+View Answer","Answer: b
+Explanation: Cache storage is very fast but it is the costliest form of storage. "
+270,"2.	What is the difference between flash memory and main memory?
+a)	Data is retained in flash memory
+b)	Data access is faster in flash memory
+c)	Data storage is very large in flash memory
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Data is retained in flash memory. Power losses do not affect the data stored in flash memory."
+271,"3.	What is the full form of USB?
+a)	Universal Serial Binary
+b)	Universal Storage Base
+c)	Universal Serial Bus
+d)	Uninterrupted Service Bus
+View Answer","Answer: c
+Explanation: USB – Universal Serial Bus. This is currently the most popular and convenient way of data transmittal. "
+272,"4.	DVD is a form of ______ storage
+a)	Magnetic storage
+b)	USB storage
+c)	Tape storage
+d)	Optical storage
+View Answer","Answer: d
+Explanation: DVD is a form of optical storage. The data on a DVD is read by an optical reader. "
+273,"5.	Which of the following is a part of the Magnetic disk assembly?
+a)	Spindle
+b)	Read write head
+c)	Arm
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: In a magnetic disk assembly, Spindle is the central cylindrical rod, Read write head is used to read and write data and the arm is used to hold the magnetic disk. "
+274,"6.	When a large number of disks are connected by a high speed network to a number of server computers, it is known as ________ architecture
+a)	Storage area network
+b)	High performance network
+c)	Multiple disk network
+d)	Local area network
+View Answer","Answer: a
+Explanation: When a large number of disks are connected by a high speed network to a number of server computers, it is known as Storage Area Network (SAN) architecture. These disks are usually arranged by a local organization technique called RAID. "
+275,"7.	The time from when a read or write request is issued to when the actual data transfer begins is called _______
+a)	Seek time
+b)	Access time
+c)	Average latency time
+d)	Data transfer rate
+View Answer","Answer: b
+Explanation: The time from when a read or write request is issued to when the actual data transfer begins is called access time. Data transfer rate is the rate at which data can be retrieved from the storage. "
+276,"8.	The time for repositioning the arm is called as _________
+a)	Seek time
+b)	Access time
+c)	Reposition time
+d)	Latency time
+View Answer","Answer: a
+Explanation: The time for repositioning the arm is called as Seek time."
+277,"9.	Which of the following is a measure of reliability of a disk?
+a)	Seek time
+b)	Average latency time
+c)	Mean time to failure
+d)	Average seek time
+View Answer","Answer: c
+Explanation: The mean time to failure is the measure of the reliability of a disk. It gives the mean of the times that most disks last. "
+278,"10.	What is buffering?
+a)	The blocks read from disk are directly accessed
+b)	The blocks read from disk are temporarily stored in a memory
+c)	The blocks read from disk are organized in a particular fashion to cater requests.
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Buffering involves reading the data and storing it in a temporary memory location called as the data buffer for future requests. The data in the buffer is temporary and is deleted after usage. "
+279,"11.	What is an NVRAM?
+a)	RAM which is non-volatile in nature
+b)	RAM whose data is not lost during power failures
+c)	RAM that significantly speeds up data transfers
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: A non-volatile random access memory or NVRAM is the one which is non-volatile, data is retained during power failure and which considerably speeds up the disk writes."
+280,"12.	Files that support log disks are called as ________
+a)	Logging file systems
+b)	Jorte File Systems
+c)	Journaling File Systems
+d)	Channelizing File Systems
+View Answer","Answer: c
+Explanation: Files that support log disks are called as Journaling File Systems. Journaling file systems can be implemented without a separate log disk, keeping the data and the log on the same disk. "
+281,"13.	State true or false: NOR flash is cheaper than NAND flash
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: NAND flash is significantly cheaper than NOR flash and also has a higher storage capacity and hence is widely used."
+282,"14.	The logical to physical page mapping is represented in a ____________
+a)	Logic physical table
+b)	Transition table
+c)	Wear leveling table
+d)	Logic log table
+View Answer","Answer: b
+Explanation: The logical to physical page mapping is represented in a Transition table which is generally available in memory. This is used for quick access of data. "
+283,"1.	What is the full form of RAID?
+a)	Redundant Array of Independent Disks
+b)	Reliable Array of Independent Disks
+c)	Redundant Asset Increment Data
+d)	Reliable Aggravation of Immaculate Data
+View Answer","Answer: a
+Explanation: The full form of RAID is Redundant array of Independent Disks. This disk organization technique improves performance and reliability. "
+284,"2.	The process of duplicating every disk is called _______
+a)	Incremention
+b)	Arraying
+c)	Mirroring
+d)	Reflecting
+View Answer","Answer: c
+Explanation: The simplest technique to introduce redundancy is to duplicate every disk. This process is known as Mirroring."
+285,"3.	State true or false: Using RAID increases the mean time to failure
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Using RAID enables us to use multiple disks which when combined together increase the mean time to failure. "
+286,"4.	Data striping by splitting bits across multiple disks is called as _______
+a)	RAID striping
+b)	Array striping
+c)	Bit level striping
+d)	Block level striping
+View Answer","Answer: c
+Explanation:  Data striping by splitting bits across multiple disks is called as bit level striping. For example if we have an array of 8 disks, we write bit I of each byte to disk i. "
+287,"5.	How many levels of RAID exist?
+a)	5
+b)	6
+c)	7
+d)	8
+View Answer","Answer: c
+Explanation: There exist a total of 7 RAID levels ranging from 0 to 6."
+288,"6.	RAID level 0 refers to?
+a)	Disk arrays with striping at the level of blocks
+b)	Disk mirroring with block striping
+c)	Memory style error correcting code
+d)	Block interleaved distributed parity
+View Answer","Answer: a
+Explanation: RAID level 0 refers to Disk arrays with striping at the level of blocks. This level does not have any redundancy. "
+289,"7.	RAID level 1 refers to?
+a)	Disk arrays with striping at the level of blocks
+b)	Disk mirroring with block striping
+c)	Memory style error correcting code
+d)	Block interleaved distributed parity
+View Answer","Answer: b
+Explanation: RAID level 1 refers to Disk mirroring with block striping. This is also called as RAID 10 or RAID 1+0. "
+290,"8.	RAID level 2 refers to?
+a)	Disk arrays with striping at the level of blocks
+b)	Disk mirroring with block striping
+c)	Memory style error correcting code
+d)	Block interleaved distributed parity
+View Answer","Answer: c
+Explanation: RAID level 2 refers to Memory style error correcting code. Memory systems have long parity bits for error detection and correction. "
+291,"9.	RAID level 5 refers to?
+a)	Disk arrays with striping at the level of blocks
+b)	Disk mirroring with block striping
+c)	Memory style error correcting code
+d)	Block interleaved distributed parity
+View Answer","Answer: d
+Explanation: RAID level 5 refers to Block interleaved distributed parity. It partitions both the data and parity among N+1 disks. "
+292,"10.	Which of the factors need not be taken into consideration while choosing a RAID level?
+a)	Monetary cost
+b)	I/O requirements
+c)	Performance when the disk has failed
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: Monetary cost, I/O requirements, performance when disk has failed are to be taken into consideration while choosing a RAID level. "
+293,"1.	What is the approximate storage capacity of CDs in MB
+a)	300
+b)	700
+c)	1100
+d)	1500
+View Answer","Answer: b
+Explanations: CDs generally have a storage capacity of 700 Megabytes and DVDs have a storage capacity of around 4.7 Gigabytes."
+294,"2.	The devices that store a lot of optical disks are called as
+a)	Optical reservoirs
+b)	Jukeboxes
+c)	Karaoke machines
+d)	Sequential access machines
+View Answer","Answer: b
+Explanation: Jukeboxes are the devices that store a lot of optical disks and load them automatically on demand. "
+295,"3.	Which of the following is true about file header?
+a)	It is allocated at the beginning of the file
+b)	It has information about the file
+c)	It generally contains the address of the first record in it
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: A file header is a certain number of bytes allocated at the beginning of the file. It contains a variety of information about the file and it can be used to point the first record by storing the address of the first record in it."
+296,"4.	How can variable length records arise in a file
+a)	Storage of multiple record types in a file
+b)	Record types that allow variable lengths for one or more fields
+c)	Record types that allow repeating fields, such as arrays or multisets
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Variable length records arise in a system in several ways like, Storage of multiple record types in a file. Record types that allow variable lengths for one or more fields. Record types that allow repeating fields, such as arrays or multisets. "
+297,"5.	What does a null bitmap indicate?
+a)	The database does not exist
+b)	The record does not exist
+c)	The attributes of a record do not have a value
+d)	The attributes are missing from record
+View Answer","Answer: c
+Explanation: A null-bitmap indicates that the attributes of a particular record have null values. "
+298,"6.	State true or False: Variable length records cannot be implemented
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Variable length records can be implemented in databases. There are different techniques to implement variable length records. "
+299,"7.	The linked list formed by the deleted records is called as ______
+a)	Delete list
+b)	Free list
+c)	Null list
+d)	Non-existent list
+View Answer","Answer: b
+Explanation: As the addresses can be thought of as pointers, the deleted records thus form a linked list. The linked list formed by the deleted records is called as a free list. "
+300,"8.	The slotted page structure is used for _________
+a)	Organizing records in a block
+b)	Organizing blocks in a database
+c)	Deleting records from a block
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The slotted page structure is used for organizing records in a block. The slotted page structure contains a header at the beginning of each block. "
+301,"9.	The header in the slotted page structure does not contain which of the following data?
+a)	The number of record entries in the header
+b)	The end of free space in a block
+c)	The size of all the records put together in the header
+d)	An array containing location and size of each record
+View Answer","Answer: c
+Explanation: The header in the slotted page structure does not contain the size of all the records put together in the header but it contains the number of record entries, the end of free space and an array containing location and size of each record. "
+302,"10.	State true or false: It is easier to delete a record from the fixed length records
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: It is tough to delete a record from the fixed length records but it is easier to delete a record from the variable length record. Thus, implementation of variable records is preferred. "
+303,"1.	What is heap file organization?
+a)	Any record can be placed wherever there is a space for the record
+b)	Records are stored in a sequential order according to a search key
+c)	A hash function is computed on some attribute and that decides the block
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Heap file organization means that any record can be placed wherever there is space for that record. There is no ordering of records. Typically there is a single file for each relation. "
+304,"2.	What is sequential file organization?
+a)	Any record can be placed wherever there is a space for the record
+b)	Records are stored in a sequential order according to a search key
+c)	A hash function is computed on some attribute and that decides the block
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Sequential file organization means that Records are stored in a sequential order according to a search key. The records are ordered. "
+305,"3.	What is hashing file organization?
+a)	Any record can be placed wherever there is a space for the record
+b)	Records are stored in a sequential order according to a search key
+c)	A hash function is computed on some attribute and that decides the block
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Hashing file organization means that a hash function is computed on some attribute and that decides the block. The result of the hash function specifies which block of the file the record should be placed in. "
+306,"4.	What is a search key in sequential file organization?
+a)	A number assigned to each record
+b)	Necessarily the primary key
+c)	Any attribute or a set of attributes
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: A search key in sequential file organization is any attribute or a set of attributes that need not be a primary key or even a superkey. "
+307,"5.	Metadata about the relations are stored in ________
+a)	File header
+b)	Data dictionary
+c)	Data query
+d)	Data analyser
+View Answer","Answer: b
+Explanation: A relational schema needs to maintain data about the data called as metadata. Metadata about the relations is stored in the Data dictionary."
+308,"6.	Data dictionary is also called as ________
+a)	Data log
+b)	System log
+c)	System catalog
+d)	System database log
+View Answer","Answer: c
+Explanation: Data dictionary is also called as System Catalog. "
+309,"7.	What is a multitable clustering file organization?
+a)	It stores related records of two or more relations in each block
+b)	It stores related data about the relations in each block
+c)	It links each and every block by introducing an external attribute
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A multitable clustering file organization stores the related records of two or more relations in each block. This allows us to read records that satisfy a join condition by using one block read. "
+310,"8.	Which of the following need to be stored in the data dictionary?
+a)	Name of the relation
+b)	Domains and lengths of attributes
+c)	Integrity constraints
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Name of the relation, Domains and lengths of attributes and Integrity constraints all must be stored in the data dictionary."
+311,"9.	The subsystem responsible for the allocation of buffer space is called as _______
+a)	Buffer allocator
+b)	Buffer manager
+c)	Buffer enhancer
+d)	Buffer intermediary
+View Answer","Answer: b
+Explanation: The subsystem responsible for the allocation of buffer space is called as buffer manager. Programs on the database make requests to the buffer manager and it in in turn allocates the buffer space. "
+312,"10.	What is the full form of LRU (in buffer replacement strategy)?
+a)	Least Reactive User
+b)	Least Recently Used
+c)	Least Read URL
+d)	Lowest Reading User
+View Answer","Answer: b
+Explanation: The full form of LRU is Least Recently Used. In this, the least recently used program is substituted by the new request. "
+313,"1.	The types of access that are supported efficiently are called as ________
+a)	Access modes
+b)	Access types
+c)	Access time
+d)	Access overhead
+View Answer","Answer: b
+Explanation: The types of access that are supported efficiently are called as Access types. Access types can include finding records with a specified attribute value or within a particular range."
+314,"2.	The time it takes to find a particular data item is called as ___________
+a)	Insertion time
+b)	Deletion time
+c)	Time overhead
+d)	Access time
+View Answer","Answer: d
+Explanation: The time it takes to find a particular data item or a set of data items using the technique in question is called as access time."
+315,"3.	The time it takes to insert a new data item is called ____________
+a)	Insertion time
+b)	Deletion time
+c)	Time overhead
+d)	Access time
+View Answer","Answer: a
+Explanation: The time it takes to insert a new data item is called Insertion time. This value includes the time taken to find the correct place to insert the new data item as well as the time it takes to update the index structure."
+316,"4.	The time it takes to delete a data item is called as _________
+a)	Insertion time
+b)	Deletion time
+c)	Time overhead
+d)	Access time
+View Answer","Answer: b
+Explanation: The time it takes to delete a data item is called as deletion time. This value includes finding the item to be deleted and the time taken to update the index structure."
+317,"5.	The additional space occupied by an index structure is called as _________
+a)	Access modes
+b)	Space types
+c)	Access time
+d)	Space overhead
+View Answer","Answer: d
+Explanation: The additional space occupied by an index structure is called as space overhead. It is usually a worthwhile sacrifice to achieve improved performance."
+318,"6.	If the file containing the records is sequentially ordered, a ___________ is an index whose search key also defines the sequential order of the file.
+a)	Clustering data
+b)	Cluttering index
+c)	Clustering index
+d)	Clustering number
+View Answer","Answer: b
+Explanation: If the file containing the records is sequentially ordered, a Clustering index is an index whose search key also defines the sequential order of the file. Clustering indices are also called as primary indices but they do not denote an index on the primary key. Such indices can be built on any search key."
+319,"7.	State true or false: Clustering indices are also called as primary indices
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: If the file containing the records is sequentially ordered, a Clustering index is an index whose search key also defines the sequential order of the file. Clustering indices are also called as primary indices."
+320,"8.	If an index entry appears for every search key value in the file, it is called as ________
+a)	Dense key
+b)	Dense index
+c)	Sparse key
+d)	Sparse index
+View Answer","Answer: b
+Explanation: In a dense index, an index entry appears for every search key value in the file. In a dense clustering index, the index record contains the search-key value and a pointer to the first data record with that search-key value."
+321,"9.	If an index entry appears for only some of the search key values in the file, it is called as ________
+a)	Dense key
+b)	Dense index
+c)	Sparse key
+d)	Sparse index
+View Answer","Answer: d
+Explanation: In a sparse index, an index entry appears for only some of the search key values. Sparse indices can be used only if the relation is stored in the sorted order of the search key i.e. if the index is a clustering index."
+322,"10.	Indices with two or more levels are called as?
+a)	Multiple Indices
+b)	Multilevel indices
+c)	Bi- tri- Indices
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Indices with two or more levels are called as multilevel indices. They require significantly few I/O operations than searching using binary search."
+323,"11.	A search key containing more than one attribute is called a _________ search key
+a)	Multiple
+b)	Multilevel
+c)	Composite
+d)	Primary
+View Answer","Answer: b
+Explanation: A search key containing more than one attribute is called as a composite search key. The structure of the index is the same as that of any other index, the only difference being that it is not a single search attribute but a list of attributes."
+324,"1.	State true or false: B+ trees are not always balanced trees.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: B+ trees are always balanced. Every path from the root to the leaf of the tree is of the same length. "
+325,"2.	What are the leaf nodes in a B+ tree?
+a)	The topmost nodes
+b)	The bottommost nodes
+c)	The nodes in between the top and bottom nodes
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The bottommost nodes that mark the end of a tree are known as the leaf nodes in a B+ tree."
+326,"3.	Non-leaf nodes are also called as __________
+a)	Internal nodes
+b)	External nodes
+c)	Middle nodes
+d)	Primary nodes
+View Answer","Answer: a
+Explanation: Non leaf nodes are also known as internal nodes. A non-leaf node may hold up to n pointers and should hold at least n/2 pointers. "
+327,"4.	The queries used to find all records with search key values in a particular range are known as ________
+a)	Gap queries
+b)	Graph queries
+c)	Range queries
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The queries used to find all records with search key values in a particular range are known as Range queries. These type of queries are executed using procedures. "
+328,"5.	Statement 1: Insertion of record might require the change in position of the initial nodes.
+Statement 2: Deletion of records might require the change in position of the initial nodes.
+a)	Both the statements are true
+b)	Statement 1 is true but statement 2 is false
+c)	Statement 2 is true but statement 1 is false
+d)	Both the statements are false
+View Answer","Answer: a
+Explanation: Both insertion and deletion of records might require the change in position of the initial nodes because the new data value might not exactly fit into the B+ tree. Thus rotation of the nodes is generally required. "
+329,"6.	If a relation can have more than one record containing the same search key value, the search key is said to be a __________
+a)	Unique search key
+b)	Non unique search key
+c)	Multiple search key
+d)	Identical search key
+View Answer","Answer: b
+Explanation: If a relation can have more than one record containing the same search key value, the search key is said to be a non-unique search key. A problem with non-unique search keys is inefficiency during delete operations. "
+330,"7.	State true or false: The fanout of nodes can be increased by using a technique called _________
+a)	Prefix compression
+b)	Postfix compression
+c)	Prefix expansion
+d)	Postfix expansion
+View Answer","Answer: a
+Explanation: The fanout of nodes can be increased by using a technique called prefix compression. In this, we do not store the entire value of the search key at the node. We only store the prefix of the search key. "
+331,"8.	Insertion of a large number of entries at a time into an index is referred to as _______ of the index.
+a)	Bulk loading
+b)	Mass insertion
+c)	Quick insertion
+d)	Quick loading
+View Answer","Answer: a
+Explanation: Insertion of a large number of entries at a time into an index is referred to as bulk loading of the index. This reduces the time complexity as multiple entries are loaded at the same time. "
+332,"9.	___________ are the indices that store the values of some attributes along with the pointers to the recor.
+a)	Binary indices
+b)	Covering indices
+c)	Key indices
+d)	Static indices
+View Answer","Answer: b
+Explanation: Covering indices are the indices that store the values of some attributes along with the pointers to the record. Storing extra attribute values is useful as they allow us to Answer queries without actually looking up the records. "
+333,"1.	The term ______ is used to denote a unit of storage that can store one or more records
+a)	Basket
+b)	Bucket
+c)	Unit
+d)	Set
+View Answer","Answer: b
+Explanation: The term bucket is used to denote a unit of storage that can store one or more records. A bucket is typically a disk block but it can also be larger than a disk block. "
+334,"2.	If K denotes the set of all the search key values, and B denotes the set of all bucket addresses, a function from K to B is called as __________
+a)	Bucket function
+b)	Address function
+c)	Hash function
+d)	Search function
+View Answer","Answer: c
+Explanation: If K denotes the set of all the search key values, and B denotes the set of all bucket addresses, a function h from K to B is called as the hash function. It determines which bucket should contain the data in question. "
+335,"3.	In a __________ , we obtain the address of the disk block containing a desired record directly by computing a function on the search key value of the record
+a)	Hash file organization
+b)	Hash index organization
+c)	Hashing address
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Hashing can be used for 2 different purposes, hash file organization and hash index organization. In a Hash file organization, we obtain the address of the disk block containing a desired record directly by computing a function on the search key value of the record. "
+336,"4.	In a __________ we organize the search keys, with their associated pointers, into a hash file structure
+a)	Hash file organization
+b)	Hash index organization
+c)	Hashing address
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Hashing can be used for 2 different purposes, hash file organization and hash index organization. In a hash index organization, we organize the search keys, with their associated pointers, into a hash file structure."
+337,"5.	What is a bucket overflow?
+a)	When a bucket does not have enough space
+b)	There are insufficient buckets
+c)	When Bucket skew occurs
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Bucket overflow can occur in many ways. When a bucket does not have enough space, there are insufficient buckets, when a bucket skew occurs. "
+338,"6.	Some buckets are assigned more records than the others which causes bucket overflow, this condition is called as ________
+a)	Bucket sufficiency
+b)	Bucket insufficiency
+c)	Bucket skew
+d)	Bucket normalcy
+View Answer","Answer: c
+Explanation: Some buckets are assigned more records than the others which causes bucket overflow, this condition is called as Bucket skew. Skew occurs if multiple records have the same search key or if the given hash function is non uniform. "
+339,"7.	Overflow handling using a linked list of buckets is called as ____________
+a)	Bucket chaining
+b)	Overflow chaining
+c)	Bucket linking
+d)	Overflow linking
+View Answer","Answer: b
+Explanation: All the overflow buckets are chained together in a linked list. Overflow handling using a linked list of buckets is called as Overflow chaining."
+340,"8.	State true or false: A hash index organizes the search keys, with their associated pointers, into a hash file structure
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: A hash index organizes the search keys, with their associated pointers, into a hash file structure. We can construct a hash index by applying a hash function on a search key and store the key and its associated pointers in the bucket. "
+341,"9.	Which of the following is the worst hash function among the given choices
+a)	The sum of the digits modulo 8
+b)	The sum of the digits modulo 2
+c)	The sum of the digits modulo 5
+d)	The sum of the digits
+View Answer","Answer: d
+Explanation: The sum of the digits classifies the data into the highest number of buckets, thus making the job to track the buckets more difficult than the rest. "
+342,"10.	State true or false: Hash indices are only primary index structures
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation:  Hash indices are only secondary index structures. A hash index is never needed as a clustering index structure."
+343,"1.	Dynamic hashing allows us to?
+a)	Accommodate the growth of the database
+b)	Accommodate the shrinkage of the database
+c)	Allows modification of hash function
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Dynamic hashing allows us to accommodate the growth of the database and the shrinkage of the database by allowing us to change the hash function dynamically. "
+344,"2.	Dynamic hashing is also called as _________
+a)	Extended hashing
+b)	Extendable hashing
+c)	Static hashing
+d)	Movable hashing
+View Answer","Answer: b
+Explanation: Dynamic hashing is also called as extendable hashing because it can accommodate the growth and shrinkage of the database. "
+345,"3.	Which of the following operations can be performed on an extendable hash structure?
+a)	Lookup
+b)	Insertion
+c)	Deletion
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: We can perform lookup, insertion and deletion on a dynamic hash structure."
+346,"4.	The space overhead in dynamic hashing is ________ than that of static hashing
+a)	More
+b)	Less
+c)	Equal
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The space overhead in dynamic hashing is less than that of static hashing. This is because the hash function is chosen based on the size of the file at some anticipated point in the future. "
+347,"5.	Which of the following is a disadvantage of the dynamic hashing structure
+a)	Buckets can be allocated dynamically
+b)	Lookup involves additional level of indirection
+c)	It involves a lesser space overhead
+d)	Hash structure can be modified dynamically
+View Answer","Answer: b
+Explanation: In dynamic hashing, lookup involves an additional level of indirection. The rest of the options are the advantages of dynamic hashing."
+348,"6.	The form of dynamic hashing that avoids the additional level of indirection is called as  _________
+a)	Linear hashing
+b)	Static hashing
+c)	Directive hashing
+d)	Indirective hashing
+View Answer","Answer: a
+Explanation: The form of dynamic hashing that avoids the additional level of indirection is called as Linear hashing. This has more overflow buckets than extendable hashing. "
+349,"7.	Hash structures are not the best choice for which of the following?
+a)	A search key on which individual point queries are likely
+b)	A search key which is invalid
+c)	A search key on which range queries are likely
+d)	A search key on which multi-level queries are likely
+View Answer","Answer: c
+Explanation: Hash structures are not the best choice for search keys on which range queries are likely because the range queries might contain different values of the search keys which might result in improper placement in the hash table. "
+350,"8.	Which of the following is an issue that needs to be considered while choosing an indexing technique?
+a)	Frequency of insertion and deletion
+b)	Data types of the data
+c)	Number of items in the relation
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The frequency of insertion and deletion has to be taken into consideration while choosing an indexing technique. The frequency of insertion and deletion determines the hash index. "
+351,"9.	Which of the following hash function classifies data into least number of buckets?
+a)	Sum of digits modulo 8
+b)	Sum of digits modulo 5
+c)	Sum of digits modulo 2
+d)	Sum of digits
+View Answer","Answer: a
+Explanation: The sum of digits modulo 2 classifies the data into only 2 buckets i.e. 0 and 1."
+352,"10.	Which of the following hash function classifies data into the highest number of buckets ?
+a)	Sum of digits modulo 8
+b)	Sum of digits modulo 5
+c)	Sum of digits modulo 2
+d)	Sum of digits
+View Answer","Answer: d
+Explanation: The sum of the digits hash function classifies the data into 10 different buckets thus making it the highest. "
+353,"1.	A bitmap is  _______
+a)	An array of bits
+b)	An index of bits
+c)	A function mapping all the bits of data
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A bitmap is simply an array of bits. A bitmap can be used for various purposes such as bitmap indexing. "
+354,"2.	A _________ on the attribute A of relation r consists of one bitmap for each value that A can take
+a)	Bitmap array
+b)	Bitmap index
+c)	Bitmap excess
+d)	Bitmap
+View Answer","Answer: b
+Explanation: A bitmap index on the attribute A of relation r consists of one bitmap for each value that A can take. Each bitmap contains as many bits as the number of records in the relation."
+355,"3.	Intersection of the bitmaps is done by
+a)	Logical AND
+b)	Logical OR
+c)	Logical NOT
+d)	Logical NOR
+View Answer","Answer: a
+Explanation: The intersection of the bitmaps is done by the logical AND operation. This is similar to the binary set intersection operation which is done by the logical AND operation. "
+356,"4.	What does an existence bitmap do?
+a)	It recognizes deleted records
+b)	It inserts values into empty bitmaps
+c)	It makes sure that no records are deleted
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: An existence bitmap is used to recognize deleted records and not to prevent deletion of records. It also does not insert any records into empty bitmaps. "
+357,"5.	The complement operation in bitmaps is done by using
+a)	Logical AND
+b)	Logical OR
+c)	Logical NOT
+d)	Logical NOR
+View Answer","Answer: c
+Explanation: The complement operation in bitmaps is done by using the logical not operator. This is similar to the binary complement operation. "
+358,"6.	State true or false: Bitmaps can be combined with B+ trees
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Bitmaps can be combined with B+ trees for relations where a few attribute values are extremely common. "
+359,"7.	We create an index in SQL using _______ command
+a)	Create index
+b)	New index
+c)	Create new index
+d)	Develop index
+View Answer","Answer: a
+Explanation: We create an index in SQL using the create index command. Eg: create index dept_index on instructor(dept_name). "
+360,"8.	We delete and index in SQL using the ________ command
+a)	Remove index
+b)	Delete index
+c)	Drop index
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: We delete and index in SQL using the drop index command. Syntax: drop index ;"
+361,"9.	State true or false: Intersection operations are extremely slow on bitmaps
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Intersection operations are extremely fast on bitmaps making them ideal for supporting queries on multiple attributes. "
+362,"10.	Which of the following operations is used for the union of bitmaps?
+a)	Logical AND
+b)	Logical OR
+c)	Logical NOT
+d)	Logical NOR
+View Answer","Answer: b
+Explanation: The logical OR operation is used for the computation of the union of bitmaps. This is similar to the binary set union operation. "
+363,"1.	Which of the following are steps in query processing?
+a)	Parsing and translation
+b)	Optimization
+c)	Evaluation
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Parsing and translation, optimization, evaluation are all the basic steps to process a query. "
+364,"2.	A relational algebra operation annotated with instructions on how to evaluate it is called _______
+a)	Evaluation algebra
+b)	Evaluation plan
+c)	Evaluation primitive
+d)	Evaluation engine
+View Answer","Answer: c
+Explanation:  A relational algebra operation annotated with instructions on how to evaluate it is called Evaluation primitive. The evaluation primitive is the basis for evaluation of queries. "
+365,"3.	A sequence of primitive operations that can be used to evaluate a query are called as  __________
+a)	Query evaluation algebra
+b)	Query evaluation plan
+c)	Query evaluation primitive
+d)	Query evaluation engine
+View Answer","Answer: b
+Explanation: A sequence of primitive operations that can be used to evaluate a query are called as Query evaluation plan. This is used by the query evaluation engine to process the queries. "
+366,"4.	The lowest level operator to access data in query processing is _______
+a)	File scan
+b)	File manipulation
+c)	File handling
+d)	File organization
+View Answer","Answer: a
+Explanation: The lowest level operator to access data in query processing is file scan. File scans are algorithms that locate and retrieve records that fulfill a selection criterion. "
+367,"5.	Search algorithms that use an index are referred to as _________
+a)	Index scans
+b)	Search scans
+c)	Primary scans
+d)	Equality scans
+View Answer","Answer: a
+Explanation: Search algorithms that use an index are called as index scans. We use the selection predicate to guide us through the choice of index to use in processing the query. "
+368,"6.	Sorting of relations that do not fit in memory is called as _______
+a)	Internal sorting
+b)	External sorting
+c)	Overflow sorting
+d)	Overload sorting
+View Answer","Answer: b
+Explanation: Sorting of relations that do not fit in memory is called as external sorting."
+369,"7.	A selection of the form satisfying the intersection of all records satisfying individual simple conditions is
+a)	Conjunctive selection
+b)	Disjunctive selection
+c)	Negation
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A selection of the form satisfying the intersection of all records satisfying individual simple conditions is a conjunctive selection. This is a form of complex selection predicate. "
+370,"8.	A selection of the form satisfying the union of all records satisfying individual simple conditions is
+a)	Conjunctive selection
+b)	Disjunctive selection
+c)	Negation
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: A selection of the form satisfying the intersection of all records satisfying individual simple conditions is a disjunctive selection. This is a form of complex selection predicate. "
+371,"9.	A selection of the form giving all the records not satisfying simple individual conditions is ______
+a)	Conjunctive selection
+b)	Disjunctive selection
+c)	Negation
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: A selection of the form giving all the records not satisfying simple individual conditions is negation. This is a form of complex selection predicate. "
+372,"10.	Which of the following can be implemented?
+a)	Conjunctive selection using one index
+b)	Conjunctive selection using composite index
+c)	Conjunctive selection by intersection of identifiers
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Conjunctive selection using one index, conjunctive selection using composite index and conjunctive selection by intersection of identifiers can be implemented. These are A7, A8, A9 algorithms that use an index. "
+373,"1.	A join of the form r ⨝r.A=s.B s is called as
+a)	Equi join
+b)	Left outer join
+c)	Right outer join
+d)	Full outer join
+View Answer","Answer: a
+Explanation: A join of the form r ⨝r.A=s.B s is called as equi-join where A and B are sets of attributes of r and s respectively. "
+374,2.	for each tuple tr in r do begin,"Answer: c
+Explanation: The given algorithm is called as a nested loop join because it basically consists of two nested for loops in it i.e. one for loop is inside another for loop. "
+375,"3.	If nested loop join is done on a per block basis rather than on a per tuple basis, it is called as
+a)	Equi join
+b)	Hash join
+c)	Nested loop join
+d)	Block nested loop join
+View Answer","Answer: d
+Explanation: If nested loop join is done on a per block basis rather than on a per tuple basis, it is called as Block nested loop join. Within each pair of blocks, every tuple in one block is paired with every tuple in the other block to generate all possible combinations. "
+376,"4.	The merge join can be used to compute
+a)	Natural joins
+b)	Equi joins
+c)	Both the mentioned
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The merge join can be used to compute both equijoins and natural joins. This is also called as the sort-merge-join algorithm. "
+377,"5.	The ___________ merges the sorted relation with leaf entries of the secondary B+ tree index.
+a)	Merge join algorithm
+b)	Hybrid merge join algorithm
+c)	Hash join algorithm
+d)	Hybrid Hash join algorithm
+View Answer","Answer: b
+Explanation: The Hybrid merge join algorithm merges the sorted relation with leaf entries of the secondary B+ tree index. The result contains tuples from the sorted relation and addresses for tuples from the unsorted relation. "
+378,"6.	The splitting of input until each partition of the build input fits the memory is called as ______
+a)	Temporary partitioning
+b)	Block partitioning
+c)	Recursive partitioning
+d)	Byte partitioning
+View Answer","Answer: c
+Explanation: The splitting of input until each partition of the build input fits the memory is called as recursive partitioning."
+379,"7.	Overflow resolution is performed when,
+a)	A hash index overflow is detected
+b)	Extra hash indices are to be added
+c)	When the number of partitions are to be increased
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Hash table overflows can be handled by either overflow resolution or overflow avoidance. Overflow resolution is performed when a hash index overflow is detected. "
+380,"8.	Which of the following is not a set operation
+a)	Union
+b)	Intersection
+c)	And operation
+d)	Set difference
+View Answer","Answer: c
+Explanation: The AND operation is not a set operation, it is a logical bit operation."
+381,"9.	Which of the following joins preserves the tuples of the relation on the left side of the operator?
+a)	Left outer join
+b)	Natural join
+c)	Right outer join
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Left outer join and full outer join both preserve the tuples on the left side of the operator. "
+382,"10.	State true or false: The aggregation functions can be implemented in the same way as that of duplicate elimination.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: The aggregation functions can be implemented in the same way as that of duplicate elimination. "
+383,"1.	If the results of one operation are passed on to the other, it is called as ________
+a)	Chain
+b)	Pipeline
+c)	Materialized
+d)	Tree
+View Answer","Answer: b
+Explanation: If the results of one operation are passed on to the other, it is called as Pipelined. This can be used to evaluate several expressions simultaneously. "
+384,"2.	The result of each intermediate operation are created and then are used for valuation of the next level operations, this evaluation is called as ________
+a)	Chain evaluation
+b)	Pipeline evaluation
+c)	Materialized evaluation
+d)	Demand driven evaluation
+View Answer","Answer: c
+Explanation: The result of each intermediate operation are created and then are used foe valuation of the next level operations, this evaluation is called as Materialized evaluation. This is not space effective as we need to construct the temporary relations which must be written to a disk. "
+385,"3.	If the system makes repeated requests for tuples from the operation at the top of the table, it is called as _________
+a)	Demand driven pipeline
+b)	Producer driven pipeline
+c)	Query driven pipeline
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: If the system makes repeated requests for tuples from the operation at the top of the table, it is called as demand driven pipeline. Each time an operation receives a request for tuples, it computes the next tuple or tuples to be returned and then returns that tuple. "
+386,"4.	If the operations do not wait to produce tuples, then it is called as _________
+a)	Demand driven pipeline
+b)	Producer driven pipeline
+c)	Query driven pipeline
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: If the operations do not wait to produce tuples, then it is called as producer driven pipeline. IT does not wait to produce tuples but it produces tuples eagerly. "
+387,"5.	State true or false: Sorting is an inherently blocking operation
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Sorting is an inherently blocking operation i.e. output is not given until all the tuples from their input are examined"
+388,"6.	State true or false: Join is an inherently blocking operation
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Join is not an inherently blocking algorithm. This is because all the tuples need not be examined to execute the join operation. "
+389,"7.	Which of the following techniques does not exist?
+a)	Pipelined join technique
+b)	Left pipelined join technique
+c)	Right pipelined join technique
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: Pipelined join technique, both left and right are evaluation techniques that can be used to organize data. "
+390,"8.	State true or false: Hybrid hash join is partially pipelined on the probe relation
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Hybrid hash join is partially pipelined on the probe relation since it can output tuples from the first partition as tuples are received for the probe relation. "
+391,"9.	The usage of two buffers, with one continuing execution of the algorithm while the other is written is called as __________
+a)	Double execution
+b)	Multi tasking
+c)	Double buffering
+d)	Double algorithm
+View Answer","Answer: c
+Explanation: The usage of two buffers, with one continuing execution of the algorithm while the other is written is called as Double buffering. This makes the algorithm quicker by performing CPU operations simultaneously with the I/O operations. "
+392,"10.	Which of the following functions does an iterator not provide
+a)	Open()
+b)	Next()
+c)	Close()
+d)	Wait()
+View Answer","Answer: d
+Explanation: The iterator does not provide the wait() function but it provides open(), next() and close() operations. "
+393,"1.	If on every legal database instant, the two expressions generate the same set of tuples, the expressions are called as
+a)	Equal
+b)	Equivalent
+c)	Similar
+d)	Identical
+View Answer","Answer: b
+Explanation: If on every legal database instant, the two expressions generate the same set of tuples, the expressions are called as Equivalent relational algebra expressions. The order of the tuples is completely irrelevant for equivalency. "
+394,"2.	State true or false: Selection operations are commutative
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Selection operations are commutative i.e. selection1(selection2(R)) = selection2(selection1(R)). "
+395,"3.	Which of the following operations are associative
+a)	Natural joins
+b)	Theta joins
+c)	Both the mentioned
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: Both natural join operation and theta join operation are associative. The commutativity and associativity of the join operations are important for join reordering in query optimization. "
+396,"4.	Which of the following set operations is not commutative?
+a)	Union
+b)	Intersection
+c)	Set difference
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The set difference operation is not commutative. As the position of the set difference operator affects the result of the operation. "
+397,"5.	State true or false: The projection operation does not distribute over the union operation
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: The projection operation distributes over the union operation."
+398,"6.	If no rule can be derived from any combination of others then the set of rules is said to be ________
+a)	Primitive
+b)	Axiomatic
+c)	Minimal
+d)	Atomic
+View Answer","Answer: c
+Explanation: A set of equivalence rules is said to be minimal if no rule can be derived from any combination of others. Query optimizers use minimal sets of equivalence rules. "
+399,"7.	Theta join operations are
+a)	Commutative
+b)	Associative
+c)	Distributive under projection
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The theta join operations are commutative, associative and are distributive under projection. "
+400,"8.	Which of the following operations is associative
+a)	Set union
+b)	Set intersection
+c)	Set difference
+d)	Theta join
+View Answer","Answer: d
+Explanation: The theta join operation is associative within a certain set of conditions whereas the rest of the operations are non-associative in each and every condition. "
+401,"9.	Which of the following set operations does the selection operation distribute over?
+a)	Union
+b)	Intersection
+c)	Difference
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The selection operation distributes over Set union, intersection, set difference. "
+402,"10.	State true or false: Multiple equivalence rules can be used one after the other on a query
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Multiple equivalence rules can be used one after the other on a query or on parts of the query. This can be used to simplify the query greatly thus reducing its time complexity. "
+403,"1.	Which of the following information does the database system catalog store?
+a)	Number of tuples
+b)	Number of blocks
+c)	Size of a tuple of a relation
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: The database system catalog stores the number of tuples, number of blocks, size of a tuple in a relation and the blocking factor in it as statistical data."
+404,"2.	Most databases store the distribution of values for each attribute as a __________
+a)	Histogram
+b)	Pie chart
+c)	Line graph
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Most of the databases store the distribution of values for each attribute as a histogram.in which the values for the attributes are divided into various ranges. "
+405,"3.	What is the function of the equi-width histogram?
+a)	Adjusts boundaries of the ranges such that each range has the same number of values
+b)	Divides range of values into equal sized ranges
+c)	Divides the range of values into ideally sized ranges
+d)	Does not divide the range of values.
+View Answer","Answer: b
+Explanation: The equi width histogram divides the range of values into equal sized ranges."
+406,"4.	What kind of a sample must be used for statistical analysis?
+a)	A random sample
+b)	A sample having excessive representation of a relation
+c)	A sample having suppressive representation of a relation
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A random sample must be taken into consideration for statistical analysis because it gives a fair result on the data analysis. "
+407,"5.	The ________ SQL command generates statistics on a particular relation
+a)	Statistic
+b)	Analyze
+c)	Modify
+d)	Runstats
+View Answer","Answer: b
+Explanation: The analyze command is used to generate statistics on a particular set of relations. The runstats command is also valid but not in SQL. It is used in IBM DB2."
+408,"6.	The union of all records satisfying the individual simple conditions Oi is called as ________
+a)	Conjunctive selection
+b)	Disjunctive selection
+c)	Negation
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The union of all records satisfying the individual simple conditions Oi is called as disjunctive selection. It is a form of a complex selection. "
+409,"7.	The intersection of all records satisfying the individual simple conditions Oi is called as ________
+a)	Conjunctive selection
+b)	Disjunctive selection
+c)	Negation
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The intersection of all records satisfying the individual simple conditions Oi is called as conjunctive selection. It is a form of a complex selection. "
+410,"8.	State true or false: Estimation of the size of the result of a join is not possible
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Estimation of the result of a join is possible and can be done using the Cartesian product and intersections of the two relations. It is more complicated than estimating size of a selection. "
+411,"9.	Size estimation can be done for which of the following processes?
+a)	Projection
+b)	Aggregation
+c)	Set operation
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Size estimation can be done for projection, aggregation, set operations, join operations and also the selection operation. "
+412,"10.	The size of a _____ is simply V(A,r) where r is the relation and A is a distinct value
+a)	Projection
+b)	Outer join
+c)	Aggregation
+d)	Inner join
+View Answer","Answer: c
+Explanation: The size of an aggregation is simply V(A,r) where r is the relation and A is a distinct value since there is one tuple in the aggregation for every distinct value in A. "
+413,"1.	A ________ explores the space of all query evaluation plans that are equivalent to a given query.
+a)	Cost based optimizer
+b)	Space based optimizer
+c)	Time based optimizer
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A cost based optimizer explores the space of all query evaluation plans that are equivalent to a given query, and chooses the one with the least estimated cost. "
+414,"2.	What is the disadvantage of cost based optimizers?
+a)	It is too expensive
+b)	It is inefficient in producing results
+c)	It does not perform the desired function
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: Cost based optimizers may be expensive as exploring space of all possible plans might prove to be costly. "
+415,"3.	A particular sort order is said to be _________ sort order if it could be useful for a later operation.
+a)	Interesting
+b)	Reusable
+c)	Efficient
+d)	Good
+View Answer","Answer: a
+Explanation: A particular sort order is said to be interesting-sort order if it could be useful for a later operation. "
+416,"4.	The rule that allows transformation of a logical operation to a physical operation is called
+a)	Logical equivalence rule
+b)	Physical equivalence rule
+c)	Memory equivalence rule
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The rule that allows transformation of a logical operation to a physical operation is called as a physical equivalence rule. It is a new class of equivalence rules. "
+417,"5.	State true or false: Making multiple copies of the same sub-expressions must be avoided
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: For promoting space efficiency, making multiple copies of the same sub-expressions must be avoided. "
+418,"6.	Optimizers use __________ to reduce the cost of optimization.
+a)	Analyzers
+b)	Statistics
+c)	Heuristics
+d)	Caches
+View Answer","Answer: c
+Explanation: Cost based optimizers may be expensive as exploring space of all possible plans might prove to be costly. So, optimizers use heuristics to reduce the cost of optimization. "
+419,"7.	The join orders where the right operand of each join is in one of the initial relations are called as ________
+a)	Right deep join orders
+b)	Left deep join orders
+c)	Outer join orders
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The join orders where the right operand of each join is in one of the initial relations are called as left deep join orders."
+420,"8.	Caching and reuse of query plans is called as ________
+a)	Query caching
+b)	Plan caching
+c)	Plan memorizing
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Caching and reuse of query plans is called as plan caching. It is used because the optimal plan for the new constants may differ from the optimal plan for the initial values. "
+421,"9.	What technique is used for the evaluation of a query with a nested sub query?
+a)	Caching
+b)	Decorrelated evaluation
+c)	Correlated evaluation
+d)	Time based evaluation
+View Answer","Answer: c
+Explanation: The technique used to evaluate a query with a nested sub query is called as correlated evaluation. It is not very efficient as a large number of I/O operations may occur. "
+422,"10.	The process of replacing a nested query with a query with a join is known as _________
+a)	Correlation
+b)	Decorrelation
+c)	Cache handling
+d)	Join replacement
+View Answer","Answer: b
+Explanation: The process of replacing a nested query with a query with a join is known as decorrelation. It is more complicated when the nested sub query uses aggregate functions inside it. "
+423,"1.	A view whose contents are computed and stored is called as _______
+a)	Storage view
+b)	Backup view
+c)	Materialized view
+d)	Advanced view
+View Answer","Answer: c
+Explanation: A view whose contents are computed and stored is called as a materialized view. I does not only store the query defining the view. "
+424,"2.	The task of keeping a view up to date with the underlying data is called as ________
+a)	View handling
+b)	View maintenance
+c)	View management
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: The task of keeping a view up to date with the underlying data is called as view maintenance."
+425,"3.	What is incremental materialized view maintenance?
+a)	Modifying all the parts of the view
+b)	Modifying only the affected parts of the view
+c)	Not modifying the view
+d)	None of the mentioned
+View Answer","Answer: b
+Explanation: Modifying only the affected parts of the materialized view is called as incremental view maintenance. It is much more efficient than ordinary view management. "
+426,"4.	Which of the following is a type of materialized view management?
+a)	Incremental view management
+b)	Immediate view management
+c)	Deferred view management
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Incremental, immediate and deferred are all different types of materialized view management techniques. Most database systems perform immediate view management. "
+427,"5.	What are differentials in view management?
+a)	The differences between relations
+b)	The changes made to a relation
+c)	The  changes made to an expression
+d)	More than one of the mentioned
+View Answer","Answer: d
+Explanation: The changes made to a relation or and expression are known as differentials in materialized view management."
+428,"6.	The sequence of queries that reflect the typical load on the system are known as ________
+a)	Efficacies
+b)	Workload
+c)	Selection
+d)	Balancers
+View Answer","Answer: b
+Explanation: The sequence of queries that reflect the typical workload on the system are known as workload.  "
+429,"7.	The problem of an update affecting the execution of a query associated with the update is known as the _________
+a)	Updation problem
+b)	Incremental problem
+c)	Halloween problem
+d)	Optimization problem
+View Answer","Answer: c
+Explanation: The problem of an update affecting the execution of a query associated with the update is known as the Halloween problem. This was because it was first recognized on the Halloween day at IBM. "
+430,"8.	Reducing the complexity of complex queries by similarly handling sub-queries is known as ______
+a)	Complex query handling
+b)	Multi query optimization
+c)	Complex query optimization
+d)	Parametric query optimization
+View Answer","Answer: b
+Explanation: Reducing the complexity of complex queries by similarly handling sub-queries is known as multi query optimization. "
+431,"9.	Which of the following is a multi-query optimization technique
+a)	Shared scan optimization
+b)	Parametric query optimization
+c)	Index optimization
+d)	All of the mentioned
+View Answer","Answer: a
+Explanation: Shared scan optimization is a multi query optimization technique. "
+432,"10.	If a query is optimized without providing specific values for its parameters the technique is called __________
+a)	Complex query handling
+b)	Multi query optimization
+c)	Complex query optimization
+d)	Parametric query optimization
+View Answer","Answer: d
+Explanation: If a query is optimized without providing specific values for its parameters the technique is called parametric query optimization. "
+433,"1.	Collections of operations that form a single logical unit of work are called __________
+a)	Views
+b)	Networks
+c)	Units
+d)	Transactions
+View Answer","Answer: d
+Explanation: Collections of operations that form a single logical unit of work are called transactions. A database system must ensure proper execution of transactions. "
+434,"2.	The “all-or-none” property is commonly referred to as _________
+a)	Isolation
+b)	Durability
+c)	Atomicity
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation: The all or none policy is commonly referred to as atomicity. It ensures that a work is either completed or not completed and there are no intermediate stages. "
+435,"3.	Which of the following is a property of transactions?
+a)	Atomicity
+b)	Durability
+c)	Isolation
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Atomicity, Durability and Isolation are all properties of transactions. "
+436,"4.	Execution of translation in isolation preserves the _________ of a database
+a)	Atomicity
+b)	Consistency
+c)	Durability
+d)	All of the mentioned
+View Answer","Answer: b
+Explanation: Execution of translation in isolation preserves the consistency of a database. It ensures that no other transaction is running concurrently. "
+437,"5.	Which of the following is not a property of a transaction?
+a)	Atomicity
+b)	Simplicity
+c)	Isolation
+d)	Durability
+View Answer","Answer: b
+Explanation: Simplicity is not a property of a transaction. Atomicity, Isolation, Durability are all parts of ACID properties. "
+438,"6.	Which of the following systems is responsible for ensuring durability?
+a)	Recovery system
+b)	Atomic system
+c)	Concurrency control system
+d)	Compiler system
+View Answer","Answer: a
+Explanation: The recovery system is responsible for the maintenance of durability. In addition, it also ensures atomicity. "
+439,"7.	Which of the following systems is responsible for ensuring isolation?
+a)	Recovery system
+b)	Atomic system
+c)	Concurrency control system
+d)	Compiler system
+View Answer","Answer: c
+Explanation: The concurrency control system is responsible for ensuring isolation in a database system. "
+440,"8.	State true or false: Information residing in the volatile storage does not usually survive system crashes
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Information residing in the volatile storage does not usually survive system crashes but the information in stable storage can survive system crashes efficiently. "
+441,"9.	A transaction that has not been completed successfully is called as _______
+a)	Compensating transaction
+b)	Aborted transaction
+c)	Active transaction
+d)	Partially committed transaction
+View Answer","Answer: b
+Explanation: Aborted transaction is a state after the transaction has been rolled back and the database has been restored to the state prior to the transaction. "
+442,"10.	Which of the following is not a transaction state?
+a)	Active
+b)	Partially committed
+c)	Failed
+d)	Compensated
+View Answer","Answer: d
+Explanation: Compensated is not a transaction state. But active, partially committed and failed are different states of a transaction. "
+443,"11.	The execution sequences in concurrency control are termed as ________
+a)	Serials
+b)	Schedules
+c)	Organizations
+d)	Time tables
+View Answer","Answer: b
+Explanation: The execution sequences in concurrency control are known as schedules. "
+444,"12.	The scheme that controls the interaction between executing transactions is called as _____
+a)	Concurrency control scheme
+b)	Multiprogramming scheme
+c)	Serialization scheme
+d)	Schedule scheme
+View Answer","Answer: a
+Explanation: The scheme that controls the interaction between executing transactions is called as concurrency control scheme. "
+445,"1.	I and J are _________ if they are operations by different transactions on the same data item, and at least one of them is a write operation.
+a)	Conflicting
+b)	Overwriting
+c)	Isolated
+d)	Durable
+View Answer","Answer: a
+Explanation: I and J are conflicting if they are operations by different transactions on the same data item, and at least one of them is a write operation. "
+446,"2.	If a schedule S can be transformed into a schedule S’ by a series of swaps of non-conflicting instructions, then S and S’ are
+a)	Non conflict equivalent
+b)	Equal
+c)	Conflict equivalent
+d)	Isolation equivalent
+View Answer","Answer: c
+Explanation: If a schedule S can be transformed into a schedule S’ by a series of swaps of non-conflicting instructions, then S and S’ are conflict equivalent. Not all serial schedules are conflict equivalent to each other. "
+447,"3.	A schedule is __________ if it is conflict equivalent to a serial schedule.
+a)	Conflict serializable
+b)	Conflicting
+c)	Non serializable
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: A schedule is conflict serializable if it is conflict equivalent to a serial schedule. The concept of conflict equivalence leads to the concept. "
+448,"4.	The set of ________ in a precedence graph consists of all the transactions participating in the schedule
+a)	Vertices
+b)	Edges
+c)	Directions
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The set of vertices in a precedence graph consists of all the transactions participating in the schedule. Precedence graph is a simple and efficient way of determining conflict serializability of the schedule. "
+449,"5.	A ___________of the transactions can be obtained by finding a linear order consistent with the partial order of the precedence graph.
+a)	Serializability order
+b)	Direction graph
+c)	Precedence graph
+d)	Scheduling scheme
+View Answer","Answer: a
+Explanation: A Serializability order of the transactions can be obtained by finding a linear order consistent with the partial order of the precedence graph. This process is called as topological sorting."
+450,"6.	State true or false: If I = read(Q) and J = read(Q) then the order of I and J does not matter.
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: If I = read(Q) and J = read(Q) then the order of I and J does not matter because both I  and J are read operations on the query. "
+451,"7.	State true or false: If I = read(Q) and J = write(Q) then the order of I and J does not matter.
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: If I = read(Q) and J = write(Q) then the order of I and J matters because both I  and J are different operations on the query. The order of execution determines the state of the database that is being read or written. "
+452,"8.	Which of the following is the most expensive method?
+a)	Timestamping
+b)	Plain locking
+c)	Predicate locking
+d)	Snapshot isolation
+View Answer","Answer: c
+Explanation: Predicate locking is the most expensive method and is generally not used in most databases."
+453,"1.	A transaction that performs only one operation is called as a _________
+a)	Partial schedule
+b)	Complete schedule
+c)	Dependent schedule
+d)	Independent schedule
+View Answer","Answer: a
+Explanation: A transaction that performs only one operation is called as a partial schedule because we don’t include commit or rollback operations on them. "
+454,"2.	The phenomenon in which one failure leads to a series of transaction rollbacks is called as ________
+a)	Cascading rollback
+b)	Cascadeless rollback
+c)	Cascade cause
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: The phenomenon in which one failure leads to a series of transaction rollbacks is called as cascading rollback. B=It is named so because one failure causes the rollback of several other transactions serially."
+455,"3.	State true or false: Every cascadeless schedule is also recoverable
+a)	True
+b)	False
+View Answer","Answer: a
+Explanation: Every cascadeless schedule is also recoverable because in a cascadeless schedule, the commit operations occur in the same sequence as that of write and read operations of two transactions respectively."
+456,"4.	A ___________ is one where, for each pair of transactions Ti and Tj such that Tj reads a data item previously written by Ti , the commit operation of Ti appears before the commit operation of Tj
+a)	Partial schedule
+b)	Dependent schedule
+c)	Recoverable schedule
+d)	None of the mentioned
+View Answer","Answer: c
+Explanation:  A Recoverable schedule is one where, for each pair of transactions Ti and Tj such that Tj reads a data item previously written by Ti , the commit operation of Ti appears before the commit operation of Tj."
+457,"5.	State true or false: Transactions can only run serially
+a)	True
+b)	False
+View Answer","Answer: b
+Explanation: Transactions are safer run serially but can also be run concurrently."
+458,"6.	Which of the following are the advantages of transaction concurrency?
+a)	Increased throughput
+b)	Increased utilization
+c)	Reduces average response time
+d)	All of the mentioned
+View Answer","Answer: d
+Explanation: Concurrency in transactions allow increased throughput, utilization. They also reduce average response time."
+459,"7.	The average time for a transaction to be completed after it has been submitted is called as __________
+a)	Minimum response time
+b)	Average response time
+c)	Average reaction time
+d)	Minimum reaction time
+View Answer","Answer: b
+Explanation: The average time for a transaction to be completed after it has been submitted is called as Average response time. This gets decreased when concurrency is used in transactions."
+460,"8.	If a schedule is equivalent to a serial schedule, it is called as a _________
+a)	Serializable schedule
+b)	Equivalent schedule
+c)	Committed schedule
+d)	None of the mentioned
+View Answer","Answer: a
+Explanation: If a schedule is equivalent to a serial schedule, it is called as a Serializable schedule."
+461,"9.	Which of the following is not a type of a schedule?
+a)	Partial schedule
+b)	Dependent schedule
+c)	Recoverable schedule
+d)	None of the mentioned
+View Answer","Answer: d
+Explanation: All of the mentioned schedules i.e. partial schedule, dependent schedule, recoverable schedule are different types of schedules."
